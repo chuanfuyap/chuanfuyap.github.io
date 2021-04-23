@@ -1,6 +1,6 @@
 _This repository was forked from [the `github/personal-website` repository](https://github.com/github/personal-website)_
 
-
+_Remainder was kept as note for configuring changes_
 
 ### Configuration changes
 
