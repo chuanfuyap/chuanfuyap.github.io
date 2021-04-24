@@ -6,8 +6,12 @@
 
     <div {% if site.style == 'dark' %}class="text-white"{% endif %}>
       {{ content }}
-    </div>
-
+    </div>    
+    {% unless posts_total == 0 %}
+      <div class="my-6">
+        {% include thoughts.html %}
+      </div>
+    {% endunless %}
     <div class="my-6">
       {% include projects.html %}
     </div>
@@ -18,11 +22,7 @@
       </div>
     {% endif %}
 
-    {% unless posts_total == 0 %}
-      <div class="my-6">
-        {% include thoughts.html %}
-      </div>
-    {% endunless %}
+    
   </div>
 {% else %}
   <div class="d-md-flex min-height-full {% unless site.style == 'dark' %}border-md-bottom{% endunless %}">

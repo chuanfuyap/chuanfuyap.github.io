@@ -48,7 +48,7 @@ social_media:
   twitter: chuanfuyap
   # unsplash: your_username
   # vk: your_username
-  # website: http://your_website_url
+  # website: /about
   # youtube: your_username
 
 topics:
@@ -63,3 +63,6 @@ topics:
   - name: Machine Learning
     web_url: https://github.com/topics/machine-learning
     image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Ensemble_Boosting.svg/1920px-Ensemble_Boosting.svg.png
+  
+  - name: Time Series Analysis
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Random-data-plus-trend-r2.png

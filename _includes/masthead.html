@@ -28,14 +28,23 @@
         </a>
       </div>
     {% endif %}
+    
+    <div class="{{ metadata_styles }}">
+      {% octicon person height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Person %}
+      <a href="/about"{% if site.style == 'dark' %}class="text-white"{% endif %}>
+        About Me
+      </a>
+    </div>
     {% if user.location %}
       <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
         {% octicon location height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
         {{ user.location }}
-      </div>
+      </div>      
     {% endif %}
+    
     {% if site.social_media %}
       <div class="d-flex flex-wrap flex-items-start {% if site.layout == 'stacked' %}flex-justify-center mt-1 mt-md-3{% endif %}">
+        
         {% for account in site.social_media %}
           <div class="{% unless forloop.last == true %}mr-3{% endunless %} mb-3">
             {% assign service_shortname = account[0] %}
@@ -45,10 +54,14 @@
             </a>
           </div>
         {% endfor %}
+        
       </div>
+      <div class="d-flex flex-wrap flex-items-start {% if site.layout == 'stacked' %}flex-justify-center mt-1 mt-md-3{% endif %}">
+        
     {% endif %}
     {% if user.hireable %}
       <span title="Hire me" class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2">Available for hire</span>
     {% endif %}
+    
   </div>
 {% endif %}
