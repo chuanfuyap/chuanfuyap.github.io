@@ -66,3 +66,5 @@ topics:
   
   - name: Time Series Analysis
     image_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Random-data-plus-trend-r2.png
+
+theme: jekyll-theme-midnight
