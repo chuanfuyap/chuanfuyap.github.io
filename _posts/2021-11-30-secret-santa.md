@@ -17,11 +17,24 @@ While I was hoping we'd do a simple draw of papers containing names to assign sa
 ## The input file
 Ideally, you would have a spreadsheet containing names and corresponding e-mail, so you would just assign santees and e-mail the santas that information. It should look something like this:
 
+## Assigning Santa/Santee
+There various ways to do this,
 
+But as said, I shall be adding the twist from numberphile, which would be to:
+- assign random numbers, but it'll be in pairs (e.g. 1:1, 2:2, 3:3)
+- shuffle the numbers (e.g. 2:2, 1:1:, 3:3)
+- shift half the pair of number down (e.g. 2:3, 1:2, 3:1)
+- that is your santa/santee pair
+- then assign the numbers to participant
+
+_I'll be honest, this is just complicating things, but my brain needed a lil bit of exercise_
+
+## Automating E-mail sending
+Add bout gmail less secure apps
 
 <a class="anchor" id="complete-code"></a>
 
-### Completed code 
+## All in one script 
 The completed code is below, you just need to modify the e-mail address and password and it'll accept a csv file (excel sheet is possible with `read_excel`, just modify the import line) and pair people up and send out the e-mails. 
 
 ```
