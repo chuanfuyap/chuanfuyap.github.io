@@ -2,6 +2,7 @@
 title: "Perilous Beginning in Web Design"
 published: true
 tags: misc web
+description: "Webpage building gone wrong"
 ---
 
 **Hello world**, I have finally joined the modern world and obtained my own webpage thanks to the wonderful [GitHub Pages](https://pages.github.com) and [Jekyll](https://jekyllrb.com). _However_, my journey into this was not smooth sailing, and since GitHub Pages allows for easy blogging, I thought I'd share some of the challenges I faced and fixes I employed. Following headings are the challenges and body of text are the fixes and explanations. 

@@ -70,7 +70,7 @@ df[1] = df[0]
 
 You first have this:
 
-|     |     |
+|col1 |col2 |
 |----:|----:|
 |   0 |   0 |
 |   1 |   1 |
@@ -89,7 +89,8 @@ df[1] = shuffled
 ```
 
 And we have this:
-|     |     |
+
+|col1 |col2 |
 |----:|----:|
 |   9 |   1 |
 |   0 |   9 |
