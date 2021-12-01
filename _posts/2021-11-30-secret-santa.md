@@ -7,7 +7,7 @@ tags: python automation
 _tldr; completed script that accepts list of names and sends out e-mails is [here](#complete-code)._
 
 # Backstory
-It is that time of the year again, where we partake in the festivities and practice the joy of giving. I have recently joined a new department to continue my career in research. As tradition in the department (or at least I'd like to think this is the case), we have secret santa event. For those that don't know, the idea of the event is that everyone that participates is assigned a random person (that is also participating) and you would than have to buy a present for said person (santee if you will), and the santee would not know who the santa (person giving the gift) is, hence the name, "Secret Santa". Which means, there thre are few key things for this to work, and they are:
+It is that time of the year again, where we partake in the festivities and practice the joy of giving. I have recently joined a new department to continue my career in research. As tradition in the department (or at least I'd like to think this is the case), we hold the secret santa event. For those that don't know, the idea of the event is that everyone that participates is assigned a random person (that is also participating) and you would than have to buy a present for said person (santee if you will), and the santee would not know who the santa (person giving the gift) is, hence the name, "Secret Santa". Which means, there are a few key things for this to work, and they are:
 - total anonymity
 - equal probability of santees being assigned
 - ideally a santa would not be assigned to themselves
@@ -25,8 +25,6 @@ While I was hoping we'd do a simple draw of papers containing names to assign sa
 * [Automate E-mail](#email)
     - Code to automate e-mail sending. 
 
-
-But first, as you would with any jupyter-notebook or python scripts, import all the things~!
 <a class="anchor" id="input"></a>
 
 ## The Input File
@@ -38,6 +36,7 @@ Ideally, you would have a spreadsheet containing names and corresponding e-mail,
 | Cedrick Rivard   | cedrick.rivard@secretsanta.com   |
 | Debra Blanco     | debra.blanco@secretsanta.com     |
 
+_
 If you don't or havn't started collecting participants, I recommend sharing a Google spreadsheet or OneDrive Excel for people to put their names/e-mails in, and you can extract that information out easily. 
 
 And you would import as such
@@ -56,11 +55,11 @@ But as said, I shall be adding the twist from numberphile, which would be to:
 - shuffle the numbers (e.g. 2:2, 1:1:, 3:3)
 - shift half the pair of number down (e.g. 2:3, 1:2, 3:1)
 - that is your santa/santee pair
-- then assign the numbers to participant
+- then assign the numbers to the participants
 
 _I'll be honest, this is just complicating things, but my brain needed a lil bit of exercise, and I really enjoyed that video_
 
-I'll be demonstrating with pandas, only just because it lets me print out nice little markdown tables for visualisation:
+I'll be demonstrating with pandas, only just because it lets me print out nice little markdown tables for visualisation (which it appears to not be working very well with my blogs, and that is a problem for another day/post):
 
 ```python
 import numpy as np
@@ -76,7 +75,7 @@ You first have this:
 |   1 |   1 |
 |   2 |   2 |
 
-Now shuffled and move one row down for one of the columns
+Now shuffle them and move one row down (shift, if you will) for one of the columns.
 
 ```python
 ### shuffle
@@ -139,9 +138,13 @@ def send_mail(receiver_email, subject, message,
     sendmsg = "Subject: {}\n\n{}".format(subject, message)
     ## security purpose
     context = ssl.create_default_context()
+    ## access server
     with smtplib.SMTP(smtp_server, port) as server:
+        ## start encryption
         server.starttls(context=context)
+        ## login
         server.login(username, password)
+        ## send e-mail
         server.sendmail(username, receiver_email, sendmsg.encode("utf-8"))
 ```
 
@@ -174,7 +177,7 @@ for row in names.iterrows():
 
 And then you can just check the sent mailbox to see it all go out.
 
-IF you reached the end, thanks for reading, hope you enjoyed it and hope it helped you. 
+If you reached the end, thanks for reading, hope you enjoyed it and hope it helped you. 
 
 <a class="anchor" id="complete-code"></a>
 
@@ -249,7 +252,7 @@ for row in names.iterrows():
     ## put a little sleep timer as per usual automation 'politeness'
     time.sleep(1)
 ```
-
+_I know this isn't quite `secret_santa.py` but, you can copy paste and run in any python IDE_
 
 # Appendix 
 Before I can demonstrated the code above, I needed a list of random/fake name and e-mails, for this I adapted the code from [here](https://moonbooks.org/Articles/How-to-generate-random-names-first-and-last-names-with-python-/). The key here is installing `names` package, which is easily done with `pip install names`
