@@ -17,13 +17,13 @@ While I was hoping we'd do a simple draw of papers containing names to assign sa
 ## Table of Contents
 
 * [Input Data](#input)
-    - Explore the dataset and understand what we are working with. We are working with classic [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris), if you are familiar with it, you can skip this section.
+    - Explanation of the expected input data.
 
 * [Assigning Santa/Santee](#assign)
-    - Brief run down on the model being built and the code necessary to build a classifier to predict Iris flower species. 
+    - Code to randomly assign santa/santee.
 
 * [Automate E-mail](#email)
-    - Evaluating our model, and comparing against maximum likelihood version. 
+    - Code to automate e-mail sending. 
 
 
 But first, as you would with any jupyter-notebook or python scripts, import all the things~!
