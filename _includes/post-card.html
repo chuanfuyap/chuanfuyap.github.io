@@ -3,6 +3,8 @@
     <h1 class="f4 lh-condensed mb-1">
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
+        {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
       </a>
     </h1>
   </div>
