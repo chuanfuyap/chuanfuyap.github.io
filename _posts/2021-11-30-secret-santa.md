@@ -2,7 +2,7 @@
 title: "Social Distancing Secret Santa: Automating Secret Santa with Python (including sending out e-mails)"
 published: true
 tags: python automation
-description: 
+description: "automating traditional festive social event"
 ---
 
 _tldr; completed script that accepts list of names and sends out e-mails is [here](#complete-code)._
