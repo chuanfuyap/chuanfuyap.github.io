@@ -2,13 +2,27 @@
 ---
 @import url('https://unpkg.com/primer/build/build.css');
 @import 'highlight-syntax';
-@import url(https://weloveiconfonts.com/api/?family=typicons);
+@import url(https://weloveiconfonts.com/api/?family=brandico|fontelico|typicons|zocial);
+
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+}
+
+/* fontelico */
+[class*="fontelico-"]:before {
+  font-family: 'fontelico', sans-serif;
+}
 
 /* typicons */
 [class*="typicons-"]:before {
   font-family: 'Typicons', sans-serif;
 }
 
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
 
 // If a user adds a custom font, this component will stop it from bleeding into GitHub components:
 .github-component {
