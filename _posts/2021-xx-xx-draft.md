@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Advent of Code 2021: Python"
 published: false
 tags: python advent-code-2021
@@ -15,7 +14,7 @@ While I have been coding for many years, I have not joined the advent of code be
 
 However this year, in a new environment, my new peers suggested we try a few together. So we did, and since I have already started, I feel the need to finish it, I'll be slow at it given how busy I am trying to finish off work before... well Christmas. But I'll most definitely finish it and post all my solutions. 
 
-So a little background of me so you can understand why I approach the puzzles the way I do. While I have been programming in Python before the data science boom, it was really after joining the data science crowd via a bootcamp that I went full pythonista. And my current work can also be branded as "health data science" so my toolkit is all data science related, which includes [pandas](https://pandas.pydata.org) and [numpy](https://numpy.org) and many more but I highlight these two cause I have used them a lot in my solutions. With my origin story out of the way, let the games begin! _Oh by the way, I don't enjoy playing code golf (writing as little lines as possible), so if that's you're here for, I am sorry._
+So a little background of me so you can understand why I approach the puzzles the way I do. While I have been programming in Python before the data science boom, it was really after joining the data science crowd via a bootcamp that I went full pythonista. And my current work can also be branded as "health data science" so my toolkit is all data science related, which includes [pandas](https://pandas.pydata.org) and [numpy](https://numpy.org) and many more but I highlight these two cause I have used them a lot in my solutions. With my origin story out of the way, let the games begin! _Oh by the way, I don't enjoy playing code golf (writing as little line as possible), so if that's you're here for, I am sorry._
 
 PS: IF you came before Christmas day and see lots of unfinished puzzles, I'll be updating this blog as I solve the them, so please come back if you would like to see my solutions. 
 
@@ -808,8 +807,6 @@ np.median(points)
 ### Day 11
 
 _Solutions to come soon! Promise!_
-
-
 <a class="anchor" id="day12"></a>
 
 ### Day 12
