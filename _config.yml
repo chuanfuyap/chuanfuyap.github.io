@@ -61,6 +61,7 @@ topics:
   #- name: Deep Learning
   #  web_url: https://github.com/topics/deep-learning
   #  image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Multi-Layer_Neural_Network-Vector-Blank.svg/1920px-Multi-Layer_Neural_Network-Vector-Blank.svg.png
+
   - name: Bayesian Networks
     image_url: https://en.wikipedia.org/wiki/Bayesian_network#/media/File:Bayes_icon.svg
 
@@ -68,7 +69,7 @@ topics:
     web_url: https://github.com/topics/machine-learning
     image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Ensemble_Boosting.svg/1920px-Ensemble_Boosting.svg.png
   
-  - name: Time Series Analysis
-    image_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Random-data-plus-trend-r2.png
+  #- name: Time Series Analysis
+  #  image_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Random-data-plus-trend-r2.png
 
 theme: jekyll-theme-midnight
