@@ -6,4 +6,5 @@ group :jekyll_plugins do
   gem "jekyll-github-metadata"
   gem "jekyll-octicons"
   gem "jemoji"
+  gem "kramdown"
 end
