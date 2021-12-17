@@ -1,5 +1,7 @@
 layout: stacked
 style: dark
+encoding: UTF-8
+
 
 plugins:
   - jekyll-octicons
