@@ -6,7 +6,7 @@ encoding: UTF-8
 plugins:
   - jekyll-github-metadata
   - jemoji
-#  - jekyll-octicons
+  - jekyll-octicons
 
 permalink: /:year/:month/:day/:title/
 
