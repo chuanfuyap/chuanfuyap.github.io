@@ -7,7 +7,7 @@ plugins:
   - jekyll-github-metadata
   - jemoji
   - kramdown
-  - jekyll-octicons
+#  - jekyll-octicons
 
 permalink: /:year/:month/:day/:title/
 
