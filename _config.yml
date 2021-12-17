@@ -4,9 +4,9 @@ encoding: UTF-8
 
 
 plugins:
-  - jekyll-octicons
+#  - jekyll-octicons
   - jekyll-github-metadata
-  - jemoji
+#  - jemoji
 
 permalink: /:year/:month/:day/:title/
 
@@ -58,10 +58,12 @@ topics:
     web_url: https://github.com/topics/python
     image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png
 
-  - name: Deep Learning
-    web_url: https://github.com/topics/deep-learning
-    image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Multi-Layer_Neural_Network-Vector-Blank.svg/1920px-Multi-Layer_Neural_Network-Vector-Blank.svg.png
-
+  #- name: Deep Learning
+  #  web_url: https://github.com/topics/deep-learning
+  #  image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Multi-Layer_Neural_Network-Vector-Blank.svg/1920px-Multi-Layer_Neural_Network-Vector-Blank.svg.png
+  - name: Bayesian Networks
+    image_url: https://en.wikipedia.org/wiki/Bayesian_network#/media/File:Bayes_icon.svg
+    
   - name: Machine Learning
     web_url: https://github.com/topics/machine-learning
     image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Ensemble_Boosting.svg/1920px-Ensemble_Boosting.svg.png
