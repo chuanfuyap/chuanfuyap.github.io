@@ -19,18 +19,18 @@ So a little background of me so you can understand why I approach the puzzles th
 PS: IF you came before Christmas day and see lots of unfinished puzzles, I'll be updating this blog as I solve the them, so please come back if you would like to see my solutions. 
 
 # Table of Contents
-* [Day 1](#day1)
-* [Day 2](#day2)
-* [Day 3](#day3)
-* [Day 4](#day4)
-* [Day 5](#day5)
-* [Day 6](#day6)
-* [Day 7](#day7)
-* [Day 8](#day8)
-* [Day 9](#day9)
-* [Day 10](#day10)
-* [Day 11](#day11)
-* [Day 12](#day12)
+* [Day 1: Sonar Sweep](#day1)
+* [Day 2: Dive!](#day2)
+* [Day 3: Binary Diagnostic](#day3)
+* [Day 4: Giant Squid](#day4)
+* [Day 5: Hydrothermal Venture](#day5)
+* [Day 6: Lanternfish](#day6)
+* [Day 7: The Treachery of Whales](#day7)
+* [Day 8: Seven Segment Search](#day8)
+* [Day 9: Smoke Basin](#day9)
+* [Day 10: Syntax Scoring](#day10)
+* [Day 11: Dumbo Octopus](#day11)
+* [Day 12: Passage Pathing](#day12)
 * [Day 13](#day13)
 * [Day 14](#day14)
 * [Day 15](#day15)
@@ -48,7 +48,7 @@ PS: IF you came before Christmas day and see lots of unfinished puzzles, I'll be
 
 <a class="anchor" id="day1"></a>
 
-### Day 1
+### Day 1: Sonar Sweep
 For day 1, this was pretty straightforward for me, this was essentially time series data manipulation for part 1 and part 2 which I have learned before. 
 
 ```python
@@ -62,7 +62,7 @@ df = pd.read_csv("day1.txt", names=["value"])
 
 <a class="anchor" id="day2"></a>
 
-### Day 2
+### Day 2: Dive
 Day 2 is a simple array manipulation, I have once again opted to solve it with pandas instead of numpy, which came in somewhat handy for part 2. 
 
 ```python
@@ -95,7 +95,7 @@ direction("forward") * df[df.dir=="forward"].depth.sum(0)
 
 <a class="anchor" id="day3"></a>
 
-### Day 3
+### Day 3: Binary Diagnostic 
 I think day 3 was when things start getting hard for me! Or at least the part 2, and as mentioned at the start, this thing takes time, so while there is definitely better a cleaner way for it, I have decided to leave my hacky solution int with the many if else, I'd grade myself poorly on this one, but hey its a festive game, so I'll take it easy.
 
 ```python
@@ -147,7 +147,7 @@ o2 * co2
 
 <a class="anchor" id="day4"></a>
 
-### Day 4
+### Day 4: Giant Squid
 This one was pretty fun, as I never really had to deal with dataformat like this before, reminding of a little tic-tac-toe machine, but 5x5 instead of 3x3. Since it was a non-standard input, I had to make my own input reader
 
 ```python
@@ -230,7 +230,7 @@ for d in draws:
 
 <a class="anchor" id="day5"></a>
 
-### Day 5
+### Day 5: Hydrothermal Venture
 Day 5 was an interesting one, it reminds me of minesweeper with the numbers on the board. 
 
 ```python
@@ -298,7 +298,7 @@ print(answer)
 
 <a class="anchor" id="day6"></a>
 
-### Day 6
+### Day 6: Lanternfish
 Ah day 6, this was a good one, initial reading made me think, oh exponetial growth? I do computational biology, I know exponential growth and boy was I wrong. The solution of part can be just simulated which I did. 
 
 ```python
@@ -345,7 +345,7 @@ print(sum(list(fishies.values())))
 
 <a class="anchor" id="day7"></a>
 
-### Day 7
+### Day 7: The Treachery of Whales
 I'll be honest, day 7's solution was ruined for me, I left reddit open from the night before, so I basically woke up to a meme with the solution for it, oh well, here's my code for it. 
 
 ```python
@@ -376,7 +376,7 @@ np.min(trackfuel)
 
 <a class="anchor" id="day8"></a>
 
-### Day 8
+### Day 8: Seven Segment Search
 So day 8, my goodness, this was tough, probably the most code I have ever written for a puzzle. But first the easy bit, part 1. 
 
 ```python
@@ -553,7 +553,7 @@ print(total)
 
 <a class="anchor" id="day9"></a>
 
-### Day 9
+### Day 9: Smoke Basin
 This was an interesting one, the concept was fun, however I did this late at night so I had a few variable naming issue which made me think my code was not working. And as I was just trying to finish it rather than have a clean code, the solution is somewhat long, but idea is simple, have a function for every part of the algorithm to solving the puzzle. For example in part 1 , I need to know if the spot is the lowest, then I need functions to survey the neighbours. Then in part 2 I need to reverse the survey part to "climb" up instead. Well enough chit chat, here's day 9's solution. 
 
 ```python
@@ -723,7 +723,7 @@ print(basinsize[0] * basinsize[1]* basinsize[2])
 
 <a class="anchor" id="day10"></a>
 
-### Day 10
+### Day 10: Syntax Scoring 
 For day 10's puzzles it goes back to a little easier for me as this was something I have done before, or at least it was something I have learned before. The concept of this puzzle is really a check for balanced brackets/paranthesis, which is essentially a computer science problem that can be solved using a stack data type. For those unfamilliar, stack data type is a data type where the last element to enter the stack is the first to leave, i.e. Last In First Out (LIFO). The moment I read the question, I went looking for the textbook I used to learned all this, and this is the [chapter](https://runestone.academy/runestone/books/published/pythonds/BasicDS/SimpleBalancedParentheses.html) for it. So here is the solution, for once without any numpy (except for the median part in part 2). 
 
 But first the functions needed.
@@ -804,7 +804,7 @@ np.median(points)
 
 <a class="anchor" id="day11"></a>
 
-### Day 11
+### Day 11: Dumbo Octopus
 In day eleven, we return to the good ol 2D array, so our friend numpy is back. And we'll be borrowing friends (functions) from day 9 to look at neighbouring array and checking boundaries. The concept for this puzzle is relatively simple, is just add 1 and then check for flashes, which is any element in array with value >9. Then flash them (keeping a list of who has flashed), energise neigbours, then check and make sure nobody is flashing. And below is the solution.
 
 The functions.
@@ -946,7 +946,7 @@ for i in range(222):
 
 <a class="anchor" id="day12"></a>
 
-### Day 12
+### Day 12: Passage Pathing
 
 _Solutions to come soon! Promise!_
 
