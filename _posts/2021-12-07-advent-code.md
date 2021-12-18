@@ -805,13 +805,151 @@ np.median(points)
 <a class="anchor" id="day11"></a>
 
 ### Day 11
+In day eleven, we return to the good ol 2D array, so our friend numpy is back. And we'll be borrowing friends (functions) from day 9 to look at neighbouring array and checking boundaries. The concept for this puzzle is relatively simple, is just add 1 and then check for flashes, which is any element in array with value >9. Then flash them (keeping a list of who has flashed), energise neigbours, then check and make sure nobody is flashing. And below is the solution.
 
-_Solutions to come soon! Promise!_
+The functions.
 
+```python
+def neighbours(ix, boundaries, flashing):
+    """
+    get the index for all adjacent
+    """
+    row,col = ix[0], ix[1]
+    up = (row-1, col)
+    down = (row+1, col)
+    left = (row, col-1)
+    right = (row, col+1)
+    topleft = (row-1, col-1)
+    topright = (row-1, col+1)
+    btmleft = (row+1, col-1)
+    btmright = (row+1, col+1)
+    nbours = [up, down, left, right,
+             topleft, topright, btmleft, btmright]
+    
+    x,y = boundaries
+    out = [-1, x,y]
+    safe = []
+    for n in nbours:
+        if checkbounds(n, out):
+            safe.append(n)
+        if n in flashing: ## if they have flashed, dont add to neighbours
+            safe.remove(n)
+    
+    return safe
+
+def checkbounds(ix, notsafe):
+    """ 
+    check if the neighouring spot is out of bounds
+    """ 
+    safe = True
+    for i in ix:
+        if i == notsafe[0]:
+            safe=False
+    if ix[0] == notsafe[1]:
+        safe=False
+    if ix[1] == notsafe[2]:
+        safe=False
+            
+    return safe
+
+def energise_neigbours(nlist, octolist):
+    """
+    simple loop to give energy to the neigbours
+    """
+    for n in nlist:
+        octolist[n]+=1
+        
+    return octolist
+
+def lose_charge(flashing, octolist):
+    """
+    for those that have flashed, set energy level back to 0
+    """
+    for f in flashing:
+        octolist[f]=0
+        
+    return octolist
+
+def energiselist(flashing, octolist, masterlist):
+    """
+    find those nearby the flashing octo to give energy to. 
+    """
+    energise = []
+    for f in flashing:
+        energise.extend(neighbours(f, octolist.shape, masterlist))
+        
+    return energise
+
+with open("day11.txt", "r") as f:
+    data = f.readlines()
+    data = [list(f.rstrip()) for f in data]
+    data = np.array(data).astype("int")
+```
+
+Part 1 and 2 uses the same function, so I'll post the solution together.
+
+```python
+### part 1
+octo = data.copy()
+flashcount = 0
+for i in range(100):
+    octo+=1
+    ## need master flashing list to make sure within this turn, they only flash once. 
+    master_flashing_list = []
+    
+    ## check for flash and keep flashing until nothing is at level 10
+    tmp = octo[octo>9]
+    while tmp.any():
+        ix = np.where(octo>9)
+        ix = [(x,y) for x,y in zip(ix[0],ix[1]) ]
+
+        flashing = ix.copy()
+        master_flashing_list.extend(ix)
+        
+        energise = energiselist(ix, octo, master_flashing_list)
+        
+        octo = energise_neigbours(energise, octo)
+        octo = lose_charge(flashing, octo)
+        
+        tmp = octo[octo>9]
+        
+    flashcount +=len(master_flashing_list)
+print(flashcount)
+
+### part 2
+octo = data.copy()
+for i in range(222):
+    octo+=1
+    
+    ## need master flashing list to make sure within this turn, they only flash once. 
+    master_flashing_list = []
+    
+    ## check for flash and keep flashing until nothing is at level 10
+    tmp = octo[octo>9]
+    while tmp.any():
+        ix = np.where(octo>9)
+        ix = [(x,y) for x,y in zip(ix[0],ix[1]) ]
+
+        flashing = ix.copy()
+        master_flashing_list.extend(ix)
+        
+        energise = energiselist(ix, octo, master_flashing_list)
+        
+        octo = energise_neigbours(energise, octo)
+        octo = lose_charge(flashing, octo)
+        
+        tmp = octo[octo>9]
+        
+        if octo[octo==0].shape[0]==100:
+            print("SYNCHRONY", i+1) ## +1 since python starts from 0. 
+```
 
 <a class="anchor" id="day12"></a>
 
 ### Day 12
+
+_Solutions to come soon! Promise!_
+
 <a class="anchor" id="day13"></a>
 
 ### Day 13
