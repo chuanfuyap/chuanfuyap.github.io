@@ -7,7 +7,7 @@ description: "Solutions to Advent of Code 2021 in Python"
 
 _tldr; all the solutions are in this [repo](https://github.com/chuanfuyap/adventcode/tree/main/2021) in jupyter-notebook format marked by their days_
 
-_updated 17-12-2021 for day 10's solution_
+_updated 18-12-2021 for day 11's solution_
 
 # It's puzzle time
 While I have been coding for many years, I have not joined the advent of code before. The reason for this was that I know it would be a very time consuming endeavour (and it is). I have done some odd coding challenge on [hackerrank](https://www.hackerrank.com) (though mind you, it was not geared towards employment like it is now when I did them), which was how I know how coding challenges can really take up your schedule while being fun, like any hobby would. 
