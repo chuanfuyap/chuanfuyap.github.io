@@ -947,12 +947,16 @@ for i in range(222):
 <a class="anchor" id="day12"></a>
 
 ### Day 12: Passage Pathing
+Well it seems I have hit a roadblock with day 12, I might even call it quits? Will see how it goes in day 13. But day 12 was not a simple network as I thought it would be from the initial reading of question. The more I read and thought about the question, it made me realise it might be more of a recursive problem, which I have always dislike and avoided using. So I threw in the towel for this one. Not proud of it but it's holiday season and I should not be suffering over this. I did find a non-recursive solution from reddit by [joshbduncan](https://www.reddit.com/user/joshbduncan/). His idea was instead to use a list (he used deque but I tried with list it works just as well) to store 3 things as an element, which are a starting node, nodes that has been visited recently including the lowercase nodes, and third one for part 2 which stores the lowercase node for a double visit. 
 
-_Solutions to come soon! Promise!_
+The solution is [here](https://www.reddit.com/r/adventofcode/comments/rehj2r/2021_day_12_solutions/hop8jqd/?context=3). Maybe when I am not attempting puzzles close to bedtime, I might have more energy to try this again and come up with my own solution in a long winded manner as I have done for the previous puzzles (I mean day 8/9 omg). But until then, I'll just leave this defeat here. 
 
 <a class="anchor" id="day13"></a>
 
 ### Day 13
+
+_Solutions to come soon! Promise!_
+
 <a class="anchor" id="day14"></a>
 
 ### Day 14
