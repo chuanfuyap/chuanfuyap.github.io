@@ -1,13 +1,13 @@
 ---
-title: "Advent of Code 2021: Python"
+title: "Advent of Code 2021: Python Solutions"
 published: true
 tags: python advent-code-2021
-description: "Solutions to Advent of Code 2021 in Python"
+description: "Chronicles of my advent Puzzle Problem"
 ---
 
 _tldr; all the solutions are in this [repo](https://github.com/chuanfuyap/adventcode/tree/main/2021) in jupyter-notebook format marked by their days_
 
-_updated 20-12-2021 for day 13/14's solution_
+_updated 21-12-2021: ending this on day 15_
 
 # It's puzzle time
 While I have been coding for many years, I have not joined the advent of code before. The reason for this was that I know it would be a very time consuming endeavour (and it is). I have done coding challenges before on [hackerrank](https://www.hackerrank.com) (though mind you, it was not geared towards employment like it is now when I did them), which was how I know how coding challenges can really take up your schedule while being fun, like any hobby would. 
@@ -16,7 +16,7 @@ However this year, in a new environment, my new peers suggested we try a few tog
 
 So a little background of me so you can understand why I approach the puzzles the way I do. While I have been programming in Python before the data science boom, it was really after joining the data science crowd via a bootcamp that I went full pythonista. And my current work can also be branded as "health data science" so my toolkit is all data science related, which includes [pandas](https://pandas.pydata.org) and [numpy](https://numpy.org) and many more but I highlight these two cause I have used them a lot in my solutions. With my origin story out of the way, let the games begin! _Oh by the way, I don't enjoy playing code golf (writing as little lines as possible), so if that's you're here for, I am sorry._
 
-PS: IF you came before Christmas day and see lots of unfinished puzzles, I'll be updating this blog as I solve the them, so please come back later if you would like to see my solutions. 
+__Well, as much fun as I have had, I officially give up on this, I got to day 15 and it got too hard for me, feel free to read more on [day 15's post](#day15)__
 
 # Table of Contents
 * [Day 1: Sonar Sweep](#day1)
@@ -33,18 +33,7 @@ PS: IF you came before Christmas day and see lots of unfinished puzzles, I'll be
 * [Day 12: Passage Pathing](#day12)
 * [Day 13: Transparent Origami](#day13)
 * [Day 14: Extended Polymerization](#day14)
-* [Day 15: Chiton](#day15)
-* [Day 16](#day16)
-* [Day 17](#day17)
-* [Day 18](#day18)
-* [Day 19](#day19)
-* [Day 20](#day20)
-* [Day 21](#day21)
-* [Day 22](#day22)
-* [Day 23](#day23)
-* [Day 24](#day24)
-* [Day 25](#day25)
-
+* [Day 15: The end for me](#day15)
 
 <a class="anchor" id="day1"></a>
 
@@ -1112,37 +1101,8 @@ max(countpoly.values()) - min(countpoly.values())
 
 <a class="anchor" id="day15"></a>
 
-### Day 15: Chiton
+### Day 15: The end for me
 
-_Solutions to come soon! Promise!_
+Well this is where I say goodbye to Advent of Code 2021, it has been fun and got me exercising my brain, but day 15 made me realise this is just too much of a time sink. It's holiday time, there's other things I want to do instead of just scratching my head over this. 
 
-<a class="anchor" id="day16"></a>
-
-### Day 16
-<a class="anchor" id="day17"></a>
-
-### Day 17
-<a class="anchor" id="day18"></a>
-
-### Day 18
-<a class="anchor" id="day19"></a>
-
-### Day 19
-<a class="anchor" id="day20"></a>
-
-### Day 20
-<a class="anchor" id="day21"></a>
-
-### Day 21
-<a class="anchor" id="day22"></a>
-
-### Day 22
-<a class="anchor" id="day23"></a>
-
-### Day 23
-<a class="anchor" id="day24"></a>
-
-### Day 24
-<a class="anchor" id="day25"></a>
-
-### Day 25
+But I did attempt day 15, initially I thought this would be similar to day 9's smoke basin problem, where I just keep searching for the next immediate lower value "path" and keep moving downward until I reach the exit, which failed. Then I thought I'd have a look ahead to compare the risks ahead before choosing the next step. That somehow did even worse. Finally it dawned on me, this was basically a path finding problem, which has already been solved. So I turned the input data into a weighted network and used ready made path finding algorithms. I used both Dijsktra and A star method which gave me same answers. I submitted that answer but apparently that was too low...? I guess the ready made tools worked too well. I am now writing this half asleep, ending my adventures on advent of code 2021, it has been fun. (Though I could adapt the ready made algorithm to force it to go downward?)
