@@ -7,16 +7,16 @@ description: "Solutions to Advent of Code 2021 in Python"
 
 _tldr; all the solutions are in this [repo](https://github.com/chuanfuyap/adventcode/tree/main/2021) in jupyter-notebook format marked by their days_
 
-_updated 18-12-2021 for day 11's solution_
+_updated 20-12-2021 for day 13/14's solution_
 
 # It's puzzle time
-While I have been coding for many years, I have not joined the advent of code before. The reason for this was that I know it would be a very time consuming endeavour (and it is). I have done some odd coding challenge on [hackerrank](https://www.hackerrank.com) (though mind you, it was not geared towards employment like it is now when I did them), which was how I know how coding challenges can really take up your schedule while being fun, like any hobby would. 
+While I have been coding for many years, I have not joined the advent of code before. The reason for this was that I know it would be a very time consuming endeavour (and it is). I have done coding challenges before on [hackerrank](https://www.hackerrank.com) (though mind you, it was not geared towards employment like it is now when I did them), which was how I know how coding challenges can really take up your schedule while being fun, like any hobby would. 
 
 However this year, in a new environment, my new peers suggested we try a few together. So we did, and since I have already started, I feel the need to finish it, I'll be slow at it given how busy I am trying to finish off work before... well Christmas. But I'll most definitely finish it and post all my solutions. 
 
 So a little background of me so you can understand why I approach the puzzles the way I do. While I have been programming in Python before the data science boom, it was really after joining the data science crowd via a bootcamp that I went full pythonista. And my current work can also be branded as "health data science" so my toolkit is all data science related, which includes [pandas](https://pandas.pydata.org) and [numpy](https://numpy.org) and many more but I highlight these two cause I have used them a lot in my solutions. With my origin story out of the way, let the games begin! _Oh by the way, I don't enjoy playing code golf (writing as little lines as possible), so if that's you're here for, I am sorry._
 
-PS: IF you came before Christmas day and see lots of unfinished puzzles, I'll be updating this blog as I solve the them, so please come back if you would like to see my solutions. 
+PS: IF you came before Christmas day and see lots of unfinished puzzles, I'll be updating this blog as I solve the them, so please come back later if you would like to see my solutions. 
 
 # Table of Contents
 * [Day 1: Sonar Sweep](#day1)
@@ -31,9 +31,9 @@ PS: IF you came before Christmas day and see lots of unfinished puzzles, I'll be
 * [Day 10: Syntax Scoring](#day10)
 * [Day 11: Dumbo Octopus](#day11)
 * [Day 12: Passage Pathing](#day12)
-* [Day 13](#day13)
-* [Day 14](#day14)
-* [Day 15](#day15)
+* [Day 13: Transparent Origami](#day13)
+* [Day 14: Extended Polymerization](#day14)
+* [Day 15: Chiton](#day15)
 * [Day 16](#day16)
 * [Day 17](#day17)
 * [Day 18](#day18)
@@ -49,7 +49,7 @@ PS: IF you came before Christmas day and see lots of unfinished puzzles, I'll be
 <a class="anchor" id="day1"></a>
 
 ### Day 1: Sonar Sweep
-For day 1, this was pretty straightforward for me, this was essentially time series data manipulation for part 1 and part 2 which I have learned before. 
+For day 1, this was pretty straightforward for me, this was essentially time series data manipulation for part 1 and part 2 which I have learned before. Which is why I can just call a built-in function from pandas/numpy for it. 
 
 ```python
 import pandas as pd 
@@ -76,7 +76,7 @@ def direction(whereto):
 direction("forward") * (direction("down")- direction("up"))
 ```
 
-For part 2, I could have used if else to solve it in a loop, however my peer was really wanting to vectorise the solution, so after some brainstorming here is the solution which pandas came in really handy with new column generation. 
+For part 2, I could have used if else to solve it in a loop, however my peer was really wanting to vectorise the solution, so after some brainstorming here is the solution where pandas came in really handy with new column generation. 
 
 ```python
 ## part 2
@@ -96,7 +96,7 @@ direction("forward") * df[df.dir=="forward"].depth.sum(0)
 <a class="anchor" id="day3"></a>
 
 ### Day 3: Binary Diagnostic 
-I think day 3 was when things start getting hard for me! Or at least the part 2, and as mentioned at the start, this thing takes time, so while there is definitely better a cleaner way for it, I have decided to leave my hacky solution int with the many if else, I'd grade myself poorly on this one, but hey its a festive game, so I'll take it easy.
+I think day 3 was when things started getting hard for me! Or at least the part 2, and as mentioned at the start, this thing takes time, so while there is definitely better a cleaner way for it, I have decided to leave my hacky solution int with the many if else, I'd grade myself poorly on this one, but hey its a festive game, so I'll take it easy.
 
 ```python
 ### part 1 
@@ -299,7 +299,7 @@ print(answer)
 <a class="anchor" id="day6"></a>
 
 ### Day 6: Lanternfish
-Ah day 6, this was a good one, initial reading made me think, oh exponetial growth? I do computational biology, I know exponential growth and boy was I wrong. The solution of part can be just simulated which I did. 
+Ah day 6, this was a good one, initial reading made me think, oh exponetial growth? I do computational biology, I know exponential growth and boy was I wrong. The solution of part 1 can be just simulated which I did. 
 
 ```python
 import numpy as np
@@ -346,7 +346,7 @@ print(sum(list(fishies.values())))
 <a class="anchor" id="day7"></a>
 
 ### Day 7: The Treachery of Whales
-I'll be honest, day 7's solution was ruined for me, I left reddit open from the night before, so I basically woke up to a meme with the solution for it, oh well, here's my code for it. 
+I'll be honest, day 7's solution of part 2was ruined for me, I left reddit open from the night before, so I basically woke up to a meme about gauss trick which is the solution for it, oh well, here's my code for it. 
 
 ```python
 import numpy as np
@@ -377,7 +377,7 @@ np.min(trackfuel)
 <a class="anchor" id="day8"></a>
 
 ### Day 8: Seven Segment Search
-So day 8, my goodness, this was tough, probably the most code I have ever written for a puzzle. But first the easy bit, part 1. 
+So day 8, my goodness, this was tough, probably the most code I have ever written for a puzzle. But first the easy bit, part 1 which is just the numbers with unique length. 
 
 ```python
 import numpy as np
@@ -399,7 +399,7 @@ for codelist, output in datainput:
 print(count)
 ```
 
-I worked on part 2 for a really long time until I gave up and went to bed, then next morning I sat on the couch just thinking bout it. This was basically running at the back of my mind even while at work. However during lunch time, solution came to me. It was obvious, I have known this can be viewed as cryptography which means code breaking, and the easiest way for this was the frequency of the letters, which reminded me of the scene in the movie Zodiac. This frequency was what I used for deciphering the codes. 
+I worked on part 2 for a really long time until I gave up and went to bed, then next morning I sat on the couch just thinking bout it. This was basically running at the back of my mind even while at work. However during lunch time, solution came to me. It was obvious, I have known this can be viewed as cryptography which means code breaking, and the easiest way for this was the frequency of the letters, which reminded me of the scene in the movie Zodiac where they talked about double consonants. The alphabet frequency was what I used for deciphering the codes. 
 
 So here is my loooong code to solve this. 
 
@@ -805,7 +805,7 @@ np.median(points)
 <a class="anchor" id="day11"></a>
 
 ### Day 11: Dumbo Octopus
-In day eleven, we return to the good ol 2D array, so our friend numpy is back. And we'll be borrowing friends (functions) from day 9 to look at neighbouring array and checking boundaries. The concept for this puzzle is relatively simple, is just add 1 and then check for flashes, which is any element in array with value >9. Then flash them (keeping a list of who has flashed), energise neigbours, then check and make sure nobody is flashing. And below is the solution.
+In day eleven, we return to the good ol 2D array, so our friend numpy is back. And we'll be borrowing friends (functions) from day 9 to look at neighbouring array and checking boundaries. The concept for this puzzle is relatively simple, which is just add 1 and then check for flashes, and that is any element in array with value >9. Then flash them (keeping a list of who has flashed), energise neigbours, then check and make sure nobody is flashing. And below is the solution.
 
 The functions.
 
@@ -947,22 +947,175 @@ for i in range(222):
 <a class="anchor" id="day12"></a>
 
 ### Day 12: Passage Pathing
-Well it seems I have hit a roadblock with day 12, I might even call it quits? Will see how it goes in day 13. But day 12 was not a simple network as I thought it would be from the initial reading of question. The more I read and thought about the question, it made me realise it might be more of a recursive problem, which I have always dislike and avoided using. So I threw in the towel for this one. Not proud of it but it's holiday season and I should not be suffering over this. I did find a non-recursive solution from reddit by [joshbduncan](https://www.reddit.com/user/joshbduncan/). His idea was instead to use a list (he used deque but I tried with list it works just as well) to store 3 things as an element, which are a starting node, nodes that has been visited recently including the lowercase nodes, and third one for part 2 which stores the lowercase node for a double visit. 
+Well it seems I have hit a roadblock with day 12, I might even call it quits? Will see how it goes in day 13. But day 12 was not a simple network as I thought it would be from the initial reading of question. The more I read and thought about the question, it made me realise it might be more of a recursive problem, which I have always dislike and avoided using. So I threw in the towel for this one. Not proud of it but it's holiday season and I should not be spending too long mulling over this. I did find a non-recursive solution from reddit by [joshbduncan](https://www.reddit.com/user/joshbduncan/). His idea was instead to use a list (he used deque data type but I tried with list it works just as well) to store 3 things as an element, which are the starting node, nodes that has been visited recently including the lowercase nodes, and third one for part 2 which stores the lowercase node for a double visit. 
 
 The solution is [here](https://www.reddit.com/r/adventofcode/comments/rehj2r/2021_day_12_solutions/hop8jqd/?context=3). Maybe when I am not attempting puzzles close to bedtime, I might have more energy to try this again and come up with my own solution in a long winded manner as I have done for the previous puzzles (I mean day 8/9 omg). But until then, I'll just leave this defeat here. 
 
 <a class="anchor" id="day13"></a>
 
-### Day 13
+### Day 13: Transparent Origami
+Well day 13 is quite a change of pace, it wasn't that difficult, in fact the puzzle had us reading out of our little "paper" for the answer this time, rather than just computing. This challenge had us "folding" the paper, but in my case, folding my 2D array, so numpy is back. Idea of "folding" is simple, more so since the line of folding is not counted anymore. So we just had to iterate through each row of one half and the other in reverse and summing up, and anything with value more than 1 is a "hole". And as usual, functions first.
 
-_Solutions to come soon! Promise!_
+```python 
+import numpy as np
+with open("day13.txt", "r") as f:
+    lines = f.readlines()
+    lines = [l.rstrip() for l in lines]
+    holes = [x for x in lines if "," in x]
+    holes = [x.split(",") for x in holes]
+    holes = [(int(y),int(x)) for x,y in holes]
+    fold = [x.split(" ")[-1] for x in lines if "fold" in x]
+    fold = [x.split("=") for x in fold]
+    
+    xmax = [x for x,y in holes]
+    xmax = max(xmax)+1
+    
+    ymax = [y for x,y in holes]
+    ymax = max(ymax)+1
+
+def poke_paper(paper, holes):
+    for h in holes:
+        paper[h]+=1
+    return paper
+### NOTE: I added try/except mainly cause im lazy to account for the boundaries since I didnt want to check for the dimensions during folding, and it seems to work. 
+def fold_y(paper, lineno):
+    for i, j in zip(reversed(range(lineno)), range(lineno+1,lineno*2+1 )):
+        try:
+            paper[i, :]+=paper[j,:]
+        except:
+            pass
+    
+    return paper[:lineno,:]
+
+def fold_x(paper, lineno):
+    for i, j in zip(reversed(range(lineno)), range(lineno+1,lineno*2+1 )):
+        try:
+            paper[:,i]+=paper[:,j]
+        except:
+            pass
+        
+    return paper[:,:lineno]
+``` 
+
+Solutions here, part 1 is just the first fold.
+
+```python
+### part 1 
+paper = np.zeros((xmax,ymax))
+paper = poke_paper(paper, holes)
+
+firstfold = fold[0]
+axis = firstfold[0]
+num = int(firstfold[1])
+if axis=="y":
+    paper = fold_y(paper, num)
+elif axis=="x":
+    paper = fold_x(paper, num)
+    
+paper[paper>0].shape[0]
+``` 
+
+So part 2, had me printing out the paper by sections, to read the 8 alphabets. I used chunks of 5 since i had dimension of 6 rows 40 columns, and 40/8 is 5.
+
+```python
+paper = np.zeros((xmax,ymax))
+paper = poke_paper(paper, holes)
+
+for f in fold:
+    axis = f[0]
+    num = int(f[1])
+    if axis=="y":
+        paper = fold_y(paper, num)
+    elif axis=="x":
+        paper = fold_x(paper, num)
+
+prior=0
+for i in range(5,45, 5):
+    print(paper[:,prior:i])
+    prior=i
+```
 
 <a class="anchor" id="day14"></a>
 
-### Day 14
+### Day 14: Extended Polymerization
+Well it seems the puzzles are repeating similar themes once again, terror of the memory error from day 6's lanternfish growth returns. And I think my patience has ran out and made it a habit of going to reddit for help. Part 1 was simple enough, just grow the "polymer", and so I did. 
+
+```python
+with open("day14.txt", "r") as f:
+    lines = f.readlines()
+    polymer = lines[0].rstrip()
+    
+    chain = lines[2:]
+    chainrule = [x.rstrip().split("->") for x in chain]
+    chain = {x.strip():x.strip()[0]+y.strip()+x[1] for x,y in chainrule}
+    chain2 = {x.strip():y.strip() for x,y in chainrule}
+
+def updatepolymer(poly, rules):
+    newchain=""
+    for i in range(0, len(poly)-1):
+        chunk = poly[i:i+2]
+        newchain += rules[chunk][:2]
+    newchain+=poly[-1]
+    return newchain
+
+### part 1
+polybuild = polymer
+for i in range(10):
+    polybuild = updatepolymer(polybuild, chain)
+    
+from collections import Counter
+count = Counter(polybuild)
+max(count.values()) - min(count.values())
+```
+
+Part 2 was difficult for me, while I have learned to just count the things in a dictionary (hashmap for non-pythons) from day 6, but this time it is not that straightforward. Though an idea came to me while staring at the task, the "pair insertion rules" comes in pairs. So I thought I'd just count the pairs, each time I see the pair, I "expand" and add 1 to the pair. ALl these require me to change my initial input, which gave birth to `chain2` for me to make a new dictionary giving first and second half of the new polymer in `rulepair`. While I had the idea to get it going, I was still getting the wrong answer. But I found a [solution](https://www.reddit.com/r/adventofcode/comments/rfzq6f/2021_day_14_solutions/hp3n8qp/?context=3) by [ThreadsOfCode](https://www.reddit.com/user/ThreadsOfCode/) approaching it the same way, and got it working. With that redditor's solution, I found the error in my code, I was just adding to original polymer pair counter, rather making a temporary one to split them into two. 
+
+```python
+def countpolymerpairs(poly, rules, steps):
+    ## set up the chaining rules in pairs for value
+    rulepair = {}
+    for k,v in rules.items():
+        rulepair[k]=(k[0]+v,v+k[1])
+    
+    ## set up the keys for polypair
+    polypair = {k : 0 for k,v in rulepair.items()}
+    for i in range(0, len(poly)-1):
+        polypair[poly[i:i+2]]+=1    
+    
+    for i in range(steps):
+        tmp =  {k : 0 for k,v in rulepair.items()} ### this key line was missing until I went to reddit
+        for k,v in polypair.items():
+            ## "duplicates" the polymers here
+            tmp[rulepair[k][0]] += v
+            tmp[rulepair[k][1]] += v
+        polypair=tmp
+
+    return polypair
+
+def countpolymer(polypair):
+    count = {}
+    for k,v in polypair.items():
+        if k[0] not in count:
+            count[k[0]]=0
+        count[k[0]]+=v
+    
+    return count
+### part 2
+polybuild = polymer
+polymerpairs = countpolymerpairs(polybuild, chain2, 40)
+countpoly = countpolymer(polymerpairs)
+countpoly[polybuild[-1]]+=1
+
+max(countpoly.values()) - min(countpoly.values())
+```
+
+
 <a class="anchor" id="day15"></a>
 
-### Day 15
+### Day 15: Chiton
+
+_Solutions to come soon! Promise!_
+
 <a class="anchor" id="day16"></a>
 
 ### Day 16
