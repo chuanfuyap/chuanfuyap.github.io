@@ -22,7 +22,7 @@ PhD in Bioinformatics, supervised by [Dr Jean-Marc Schwartz](https://www.researc
 #### MBiolSci, University of Sheffield,     2010-2014
 Integrated Masters in Biochemistry. 
 ## Publication
-1) [Model Parameterization with Quantitative Proteomics: Case Study with Trehalose Metabolism in Saccharomyces cerevisiae]((https://doi.org/10.3390/pr9010139) )
+1) [Model Parameterization with Quantitative Proteomics: Case Study with Trehalose Metabolism in Saccharomyces cerevisiae](https://doi.org/10.3390/pr9010139)
     
     Yap, C. F., Garcia Albornoz, M., Jarnuczak, A., Hubbard, S. & Schwartz, J-M.
     12 Jan 2021, Processes. 9, 139.
