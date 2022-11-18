@@ -376,11 +376,37 @@ When the importance/effect of one variable depend upon another variable, this is
 In SLR, I highlighted $$R^2$$ as the metric to know if the model is "correct" or useful. This metric is also applicable for SLR, however, as mentioned above we can't merely rely on a high $$R^2$$ alone in deciding a good model, and to visualise it. When it comes to MLR, visualising it can be challenging as the number of dimensions have increased. Therefore we would now need to rely on other **metrics** to inform us if our MLR model is "correct"; these are AIC, BIC and log-likelihood, all these information are provided in the output from statsmodel shown above when you execute `print(results.summary())`, located just below `R-squared` value. 
 
 #### Model Comparison
-Aside from using the above metrics alone, another way to make sure model is useful/'correct' after adding a variable or even an interaction effect is to perform model comparison that can be passed through statistical test with nice p-value. There's several options for this:
+Aside from using the above metrics alone, another way to make sure model is useful or 'correct' after adding a variable or even an interaction effect is to perform model comparison that can be passed through a statistical test to generate a everyone's favourite p-value. There's two options for this:
 * General Linear F test/ANOVA
-* likelihood-ratio test
+* likelihood-ratio test (LRT)
 
-But the core idea is the same, which is, we build two models, i) a 'full model' including all variables/interaction of interest, and ii) 'reduced model' or 'restricted model' with the extra variable/interaction removed. Then we compare it statistically, and decide which model to keep. 
+But the core idea is the same, which is, we build two models:
+
+i) a 'full model' including all variables/interaction of interest, 
+
+ii) 'reduced model' or 'restricted model' with the extra variable/interaction removed. 
+
+Then we compare it statistically, and decide which model to keep. This statistic is done with _F-distribution_ for F-test or _chi-squared distribution_ for LRT. The null hypothesis here is that the reduced model is _better_, therefore a 'significant' p-value indicate the full model (extra variable/interaction) is _better_. Better can be rephrased as _explain the data/Y better_. 
+
+The following example code is how you would perform a _LRT_:
+```python
+### extract log-likelihood of fitted models
+full_llf = fullmodel.llf # where fullmodel is statsmodel object with full model fitted
+reduced_llf = reducedmodel.llf # as above but for reduced model, e.g. one variable less
+
+### ratio, but since it is log-transformed we can take the different
+likelihood_ratio = 2 * (full_llf - reduced_llf)
+
+### take degree of freedom (dof) from models to be used in the stats
+full_dof = full_llf.df_model
+reduced_dof = reduced_llf.df_model
+
+dof = full_dof - reduced_dof
+
+### compute the p-value
+from scipy import stats # we use scipy for the statistics function
+p = stats.chi2.sf(likelihood_ratio, dof)
+```
 
 
 
