@@ -63,7 +63,7 @@ topics:
   #  web_url: https://github.com/topics/deep-learning
   #  image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Multi-Layer_Neural_Network-Vector-Blank.svg/1920px-Multi-Layer_Neural_Network-Vector-Blank.svg.png
 
-  - name: Bayesian Networks
+  - name: Bayesian Modelling
     image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Bayes_icon.svg/1920px-Bayes_icon.svg.png
 
   - name: Machine Learning
