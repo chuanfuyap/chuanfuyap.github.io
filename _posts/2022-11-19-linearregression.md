@@ -1,6 +1,6 @@
 ---
 title: "Linear Regression Crash Course"
-published: true
+published: false
 tags: linear-model linear-regression
 description: "Theory dive with application in Python"
 ---
