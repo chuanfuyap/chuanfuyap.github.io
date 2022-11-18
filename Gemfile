@@ -7,4 +7,5 @@ group :jekyll_plugins do
   gem "jekyll-octicons"
   gem "jemoji"
   gem "kramdown"
+  gem "rouge"
 end

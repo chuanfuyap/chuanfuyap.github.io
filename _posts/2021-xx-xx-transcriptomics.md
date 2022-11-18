@@ -1,5 +1,5 @@
 ---
 title: "Transcriptomics Analysis Crash-Course"
 published: false
-description: "Brief crash course on transcriptomics analysis (GWAS) with R and command line maybe python?"
+description: "Things to do with RNA expression profile data (from High-Throughput Sequencing)"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Linear Regression Crash-Course"
+title: "Time Series Analysis with Autoregressive Models"
 published: false
-description: "Brief crash course on Time Series Analysis with python"
+description: "Brief crash course on Time Series Analysis with Python"
 ---

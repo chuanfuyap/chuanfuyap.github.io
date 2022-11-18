@@ -8,8 +8,11 @@ plugins:
   - jemoji
   - kramdown
   - jekyll-octicons
+  - rouge
 
 permalink: /:year/:month/:day/:title/
+markdown: kramdown
+highlighter: rouge
 
 defaults:
   -
