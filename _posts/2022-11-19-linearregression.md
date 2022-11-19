@@ -2,7 +2,7 @@
 title: "Linear Regression Crash Course"
 published: false
 tags: linear-model linear-regression
-description: "Theory dive with application in Python"
+description: "Theory dive with application in Python - 28 min read"
 ---
 
 tldr; This will be a crash course on Linear Regression for statistical analysis with code implementation in Python. It will have minimal explanation on the maths. Feel free to navigate to [Table of Contents](#toc) to skip to section of interest which would have theory and code on them, or [click here](https://github.com/chuanfuyap/mini-ds-projects/blob/main/linear-regression/regression-notes.ipynb) for code compilation. 

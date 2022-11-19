@@ -2,7 +2,7 @@
 title: "Advent of Code 2021: Python Solutions"
 published: true
 tags: python advent-code-2021
-description: "Chronicles of my advent Puzzle Problem"
+description: "Chronicles of my advent Puzzle Problem - 15 min read"
 ---
 
 _tldr; all the solutions are in this [repo](https://github.com/chuanfuyap/adventcode/tree/main/2021) in jupyter-notebook format marked by their days_
