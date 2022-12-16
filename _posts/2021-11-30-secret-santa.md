@@ -4,6 +4,7 @@ published: true
 tags: python automation
 description: "Automating Traditional Festive Social Event - 7 min read"
 ---
+by: [Chuan Fu Yap](https://chuanfuyap.github.io)
 
 _tldr; completed script that accepts list of names and sends out e-mails is [here](#complete-code)._
 

@@ -4,7 +4,7 @@ published: false
 tags: parameter-estimation model-fitting
 description: "Basic Entry to Parameter Estimation"
 ---
-BE SURE TO UPDATE LINEAR REGRESSION POST TO LINK THIS POST WHEN DONE.
+by: [Chuan Fu Yap](https://chuanfuyap.github.io)
 
 # Parameter Estimation aka _Model Fitting_ aka _Model Learning_
  
