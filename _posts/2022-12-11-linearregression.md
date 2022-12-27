@@ -2,6 +2,8 @@
 title: "Linear Regression Crash Course"
 published: true
 tags: linear-model linear-regression
+sidebar: lm_toc
+
 description: "Theory dive with application in Python - 35 min read"
 ---
 by: [Chuan Fu Yap](https://chuanfuyap.github.io)
@@ -181,7 +183,8 @@ From top to bottom and left to right, things of interest are:
 - **P-value (P >\|t\|), the all fabled measure of statistical significance**
     - the essential ingredient of frequentist statistics where values <0.05 implies statistical significance where **null hypothesis** is disproven and (usually) therefore an important finding.
 - **95% Confidence Interval (0.025, 0.975)**
-    - The measure of confidence on the estimated _coef_. That is, we are 95% sure the estimated _coef_ is between these values. 
+    - The measure of confidence on the estimated _coef_. That is 95% of such confidence intervals in repeated experiments will contain the true value.
+    - The alternate more popular interpretation is the a more [_Bayesian interpretation_](https://youtu.be/KhAUfqhLakw?t=1332),whicht is, we are 95% sure the estimated _coef_ is between these values. 
 
 Normally, when we report our results, on top of plotting, we would **highlight the three things within the blue box**, which are _coefficient value_, _p-value_ and the _confidence interval_. 
 
