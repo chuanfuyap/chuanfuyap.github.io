@@ -184,7 +184,7 @@ From top to bottom and left to right, things of interest are:
     - the essential ingredient of frequentist statistics where values <0.05 implies statistical significance where **null hypothesis** is disproven and (usually) therefore an important finding.
 - **95% Confidence Interval (0.025, 0.975)**
     - The measure of confidence on the estimated _coef_. That is 95% of such confidence intervals in repeated experiments will contain the true value.
-    - The alternate more popular interpretation is the a more [_Bayesian interpretation_](https://youtu.be/KhAUfqhLakw?t=1332),whicht is, we are 95% sure the estimated _coef_ is between these values. 
+    - The alternate more popular interpretation is the a more [_Bayesian interpretation_](https://youtu.be/KhAUfqhLakw?t=1332),which is we are 95% sure the estimated _coef_ is between these values. 
 
 Normally, when we report our results, on top of plotting, we would **highlight the three things within the blue box**, which are _coefficient value_, _p-value_ and the _confidence interval_. 
 
