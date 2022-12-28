@@ -2,8 +2,6 @@
 title: "Linear Regression Crash Course"
 published: true
 tags: linear-model linear-regression
-sidebar: lm_toc
-
 description: "Theory dive with application in Python - 35 min read"
 ---
 by: [Chuan Fu Yap](https://chuanfuyap.github.io)
