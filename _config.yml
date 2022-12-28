@@ -2,7 +2,6 @@ layout: stacked
 style: dark
 encoding: UTF-8
 
-
 plugins:
   - jekyll-github-metadata
   - jemoji

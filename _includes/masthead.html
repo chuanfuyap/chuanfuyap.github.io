@@ -1,8 +1,10 @@
 {% if site.layout == 'stacked' %}
   {% assign metadata_styles = 'd-md-inline-block mx-3 mb-1 mb-md-0' %}
+  {% assign post_metadata = 'd-flex flex-items-center flex-justify-center mb-3' %} 
 {% else %}
   {% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
 {% endif %}
+
 
 <img src="{{ user.avatar_url }}" class="circle mb-3 center" style="max-width: 150px;">
 <h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed  text-center">{% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}</h1>
@@ -10,10 +12,12 @@
   {{ user.bio }}
 </p>
 
+
 {% if include.metadata %}
-  <div class="f4 mb-6 center">
+  <div class="f4 mb-6 text-center">
     {% if user.name %}
-      <div class="{{ metadata_styles }} center">
+    <!-- line checks if this belongs to a post or not, if it is use different style to center the lines source: https://stackoverflow.com/questions/18675610/jekyll-change-layout-if-page-is-a-post-->
+      <div class="{% if page.path contains '_posts' %} {{ post_metadata }} {% else %} {{ metadata_styles }} {% endif %}">
         {% octicon mark-github height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:GitHub %}
         <a href="https://github.com/{{ user.login }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
           @{{ user.login }}
@@ -21,7 +25,7 @@
       </div>
     {% endif %}
     {% if user.email %}
-      <div class="{{ metadata_styles }}">
+      <div class="{% if page.path contains '_posts' %} {{ post_metadata }} {% else %} {{ metadata_styles }} {% endif %}">
         {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
         <a href="mailto:{{ user.email }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
           {{ user.email }}
@@ -29,14 +33,14 @@
       </div>
     {% endif %}
     
-    <div class="{{ metadata_styles }}">
+    <div class="{% if page.path contains '_posts' %} {{ post_metadata }} {% else %} {{ metadata_styles }} {% endif %}">
       {% octicon person height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Person %}
       <a href="/about"{% if site.style == 'dark' %}class="text-white"{% endif %}>
         About Me
       </a>
     </div>
     {% if user.location %}
-      <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %} center">
+      <div class="{% if page.path contains '_posts' %} {{ post_metadata }} {% else %} {{ metadata_styles }} {% endif %}  {% if site.style == 'dark' %}text-white{% endif %}">
         {% octicon location height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
         {{ user.location }}
       </div>      
@@ -64,3 +68,5 @@
     
   </div>
 {% endif %}
+
+<!-- flex-items-center puts logo and text on same line, flex-justify-center puts object in the center -->
