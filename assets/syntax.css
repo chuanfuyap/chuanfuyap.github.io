@@ -1,5 +1,18 @@
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
+
+.highlight {
+  padding: 10;
+  border: 1px #C1C1C1; /*gives rounded border*/
+  border-radius: 5px;
+  max-height:300px;
+  width: auto;
+  overflow: auto;
+  display: block;
+  margin: 0 0px;
+  white-space: pre-wrap;
+  }
+
 .highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
   color: #75715e;
   font-style: italic;
