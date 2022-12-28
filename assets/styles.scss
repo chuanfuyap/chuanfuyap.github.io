@@ -17,7 +17,7 @@
     top: 2px;
     width: 12px;
 }
-
+/* this chunk gives spacing between columns in markdown table */
 table {
   table-layout: fixed;
   border-collapse: collapse;
@@ -38,6 +38,8 @@ thead th:nth-child(3) {
 thead th:nth-child(4) {
   width: 25%;
 }
+/* this chunk gives spacing between columns in markdown table */
+
 .emoji {
   width: 18px;
   height: auto;
