@@ -39,11 +39,15 @@
         About Me
       </a>
     </div>
+    {% if page.path contains '_posts' %}
+      <!-- removes location metadata in Posts sidebar -->
+    {% else %}
     {% if user.location %}
       <div class="{% if page.path contains '_posts' %} {{ post_metadata }} {% else %} {{ metadata_styles }} {% endif %}  {% if site.style == 'dark' %}text-white{% endif %}">
         {% octicon location height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
         {{ user.location }}
       </div>      
+      {% endif %}
     {% endif %}
     
     {% if site.social_media %}
