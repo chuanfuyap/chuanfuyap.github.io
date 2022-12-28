@@ -1,8 +1,8 @@
 ---
-title: "Perilous Beginning in Web Design"
+title: "Fixing local Jekyll server launch issue (MacOS)"
 published: true
 tags: misc web
-description: "Webpage building gone wrong - 3 min read"
+description: "Perilous Beginning in Web Design - 3 min read"
 ---
 by: [Yap Chuan Fu](https://chuanfuyap.github.io)
 

@@ -1,8 +1,8 @@
 ---
-title: "Advent of Code 2021: Python Solutions"
+title: "Advent of Code 2021: Python Solutions (Incomplete)"
 published: true
 tags: python advent-code-2021
-description: "Chronicles of my advent Puzzle Problem - 15 min read"
+description: "Chronicles of my (Failed) advent Puzzle Problem - 15 min read"
 ---
 by: [Yap Chuan Fu](https://chuanfuyap.github.io)
 
