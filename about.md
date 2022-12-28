@@ -11,16 +11,16 @@ Below is my resume summary.
 
 ## Research Experience
 #### Genetics and Genomics Research, 2021-Present
-Bioinformatics analysis on various high-throughput sequencing output, such as genomics and transcriptomics in context of Rheumatoid Arthritis
+Statistical analysis on genetics and genomics data (transcriptomics and metabolomics so far) in context of Rheumatoid Arthritis treatment. Built a HLA analysis package written in python, [hapy](https://github.com/chuanfuyap/hla-analysis-py) as part of my research on HLA genetics analysis.
 #### Metagenomics Research, 2019-2021
 Studied metagenomics of lung microbiome in context of asthma using mathematical, statistical and machine learning models. Various scripts for data processing and analysis was turned into a python package, [motupy](https://github.com/chuanfuyap/motu-python-package)
 #### Kinetic Modelling of Cell Metabolism,  2014-2018  
-This was my PhD work where I optimised ODE models of yeast cell metabolism using genetic algorithm. [Convenient Modeller](https://github.com/chuanfuyap/Convenient-Modeller) was developed as part of this work.
+This was my PhD project where I optimised ODE models of yeast cell metabolism using genetic algorithm; input data included flux and proteomics data. [Convenient Modeller](https://github.com/chuanfuyap/Convenient-Modeller) was developed as part of this work.
 ## Education
 #### PhD, University of Manchester,     2014-2018  
 PhD in Bioinformatics, supervised by [Dr Jean-Marc Schwartz](https://www.research.manchester.ac.uk/portal/jean-marc.schwartz.html) and [Prof Simon Hubbard](https://www.research.manchester.ac.uk/portal/simon.hubbard.html)
 #### MBiolSci, University of Sheffield,     2010-2014
-Integrated Masters in Biochemistry. 
+Integrated Masters in Biochemistry, with final year project focusing on dynamic model of macrophage infection by _Staph aureus_. 
 ## Publication
 1) [Model Parameterization with Quantitative Proteomics: Case Study with Trehalose Metabolism in Saccharomyces cerevisiae](https://doi.org/10.3390/pr9010139)
     
