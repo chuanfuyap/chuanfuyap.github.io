@@ -7,7 +7,7 @@ sidebar:
   nav: lm-toc
 description: "Theory dive with application in Python - 35 min read"
 ---
-by: [Chuan Fu Yap](https://chuanfuyap.github.io)
+by: [Yap Chuan Fu](https://chuanfuyap.github.io)
 
 <a class="anchor" id="top"></a>
 
