@@ -73,3 +73,50 @@ thead th:nth-child(4) {
 .min-height-full {
   min-height: 100vh;
 }
+
+/* this is to make it so that the sidebar is in fixed position */
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.nav__title {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* adds line breaks between navigator on sidebar */
+.nav__sub-title {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.25rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
+
+.nav__list .nav__items {
+  margin: 0;
+  font-size: 1rem;
+
+  a {
+    color: white;
+  }
+
+  .active {
+    margin-left: -0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-weight: bold;
+  }
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

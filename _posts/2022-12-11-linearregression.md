@@ -2,11 +2,16 @@
 title: "Linear Regression Crash Course"
 published: true
 tags: linear-model linear-regression
+sidebar:
+  title: "Table of Contents"
+  nav: lm-toc
 description: "Theory dive with application in Python - 35 min read"
 ---
 by: [Chuan Fu Yap](https://chuanfuyap.github.io)
 
-tldr; This will be a crash course on Linear Regression for statistical analysis with code implementation in Python. It will have minimal explanation on the maths. Feel free to navigate to [Table of Contents](#toc) to skip to section of interest which would have theory and code on them, or [click here](https://github.com/chuanfuyap/mini-ds-projects/blob/main/linear-regression/regression-notes.ipynb) for code compilation. 
+<a class="anchor" id="top"></a>
+
+tldr; This will be a crash course on Linear Regression for statistical analysis with code implementation in Python. It will have minimal explanation on the maths. Feel free to navigate to make use of the _Table of Contents_ on the left sidebar to skip to section of interest which would have theory and code on them, or [click here](https://github.com/chuanfuyap/mini-ds-projects/blob/main/linear-regression/regression-notes.ipynb) for code compilation. 
 
 # Prologue
 Linear regression is what I would describe as the 'swiss army knife' of statistical models or the ['Canon in D' of modelling](https://www.youtube.com/watch?v=JdxkVQy7QLM) if you will. This simple equation:
@@ -35,37 +40,6 @@ This blogpost will cover the basic of linear regression and some of its extensio
 
 This post is the cumulation of knowledge I have gathered from [STAT501](https://online.stat.psu.edu/stat501/), a PennState course module, [Statistical Rethinking](https://www.amazon.co.uk/Statistical-Rethinking-Bayesian-Examples-Chapman/dp/1482253445), a wonderful statistics textbook and [Coursera's Machine Learning course (pre 2022 update)](https://www.coursera.org/learn/machine-learning) by Andrew Ng. This blogpost also serves as my notepad for collating the notes I have taken from these sources as well as implementation in Python. 
 
-<a class="anchor" id="toc"></a>
-
-### Table of Contents
-- [Simple Linear Regression](#theory)
-    - [What is SLR?](#what)
-        - Assumptions
-        - Interpretation
-    - [Why use SLR?](#why)
-        - Hypothesis Testing
-        - Prediction
-    - [How to know SLR is working?](#how1)
-        - Coefficient of Determination, R2
-        - Check assumptions are not violated
-    - [How to estimate parameters in SLR?](#how2)
-        - Linear Algebra solution
-        - Gradient Descent
-- [Multiple Linear Regression](#mlr)
-    - Confounders
-    - Interaction Models
-    - Model Building Process
-- [Data Transformation](#transformation)
-    - Log
-    - Polynomials
-- [Beyond Linear Regression](#beyond)
-    - Logistic Regression
-    - and more
-- [Summary](#summary)
-- [Appendix](#appendix) (if I used a word without explaining it, it is probably here)
-    - Statistical Semantics/Glossary
-    - Formulas
-
 <a class="anchor" id="theory"></a>
 <a class="anchor" id="what"></a>
 
@@ -81,6 +55,8 @@ Y = \beta_0 + \beta_1 X + \epsilon
 - ϵ, is the normally distributed random error
 
 This is a 'simple' linear model because it has one predictor variable and one response variable. For multiple linear regression (MLR) with > 1 predictor variable, go [here](#mlr). 
+
+<a class="anchor" id="assumptions"></a>
 
 #### Assumptions/Conditions for SLR to work
 - **L**inear relationship/function
@@ -116,6 +92,8 @@ Above plots can be made easily using [seaborn](https://seaborn.pydata.org) with 
 
 ## Why use SLR??
 The simple interpretation of unit increase from coefficient explained above is one the reasons on why we use SLR, but the other reasons are:
+
+<a class="anchor" id="hypothesis"></a>
 
 ### Hypothesis testing
 > null hypothesis, β1=0
@@ -190,6 +168,8 @@ CAUTION:
 - large $$R^2$$ does not necessarily mean it is a good model.
 - low/significant _p-value_ is not useful if the coefficient is low. 
 
+<a class="anchor" id="prediction"></a>
+
 ### Prediction
 Arrival of big data allowed for the boom of machine learning, and linear model is one of the algorithms used in supervised learning for prediction purposes. Models trained with `statsmodels` can be used for prediction as well using `predict` function on the fitted model object, e.g. `results.predict(new_X)`. 
 
@@ -222,8 +202,13 @@ If you were wondering about the intercept of the model, by default `sklearn` inc
 ## How to know SLR is working?
 We have learned what is SLR and what it's used for, now we learn how we know it is working as intended. 
 
+<a class="anchor" id="r2"></a>
+
 ### Coefficient of Determination, $$R^2$$ 
 This gives the measure of how much variance the response variable is explained by the model. Higher value would usually imply a good model, however this should always be accompanied with a visual inspection with a scatter and linear plot as a single data-point can impact the $$R^2$$. 
+
+<a class="anchor" id="check"></a>
+
 ### Making sure assumptions are not violated 
 The **LINE** assumption is of extreme importance when it comes to hypothesis testing. The statistical significance would not hold if any of the assumption is violated, because these tests were developed with these assumptions in mind. When it comes to prediction, overfitting and underfitting is priority over model assumptions. 
 
@@ -325,6 +310,8 @@ Where
 - the superscript of -1, is notation of inverse matrix
 
 > To solve this, you to apply some linear algebra. In Python you can do it with [numpy](https://numpy.org/doc/stable/user/whatisnumpy.html). 
+
+<a class="anchor" id="gradient"></a>
 
 ### Gradient Descent
 This method can be quite involved and deserves a post of its own, so I would just mention that _gradient descent_ is or a variation of it, the _stochastic gradient descent_ are the commonly used algorithms to estimate parameters in SLR. 
@@ -466,6 +453,8 @@ This process of regressing out variable(s) serves no obvious purpose when we can
 
 In machine learning, this is equivalent to stacking ensemble framework, where we can use linear model to extract the linear relationship and pass on the residuals to other algorithms capable of handling non-linear relationship such as random forest. 
 
+<a class="anchor" id="interaction"></a>
+
 ### Interaction Models
 When the importance/effect of one variable depend upon another variable, this is known as _interaction effect_. Models that include this would then be interaction models, and as before, the model can include >1 interaction effect within it. 
 
@@ -549,7 +538,9 @@ First we need to generate the following values for the two variables:
 
 Next, we can them in to model and make four different predictions, which would give us the estimated unit increase when these two variables interact. For example in the first row when both values are zeroes, we can get estimated $$Y$$ value when the $$X$$ variable is not present, but _apple_ is present . In the second row, we would have the unit increase when $$X$$ and _apple_ present and so on. 
 
-Following that, for to numerically observe "interaction" or "dependency", we would have to narrow down on group of estimated values. For example, for $$X$$ with 0, we take values from orange/apple values, and take the difference between the two values. This would give us the the is a unit difference between the fruit variables (orange vs apple) when $$X$$ is 0. We can again isolate when values of $$X$$ is 1, and repeat the difference between the two variables. Given that $$X$$ is a continous variable, i.e. not limited to just 0/1, we can repeat this process for other numerical values, and we can see that as $$X$$ changes, the unit difference between orange and apple are different, i.e. a fruit variable depends on $$X$$. Whereas, if we did this exercise of check each possible values of fruit variable for different $$X$$ in an additive model, the unit difference would remain the same, which would be the coefficient of the fruit variable. To make sense of this, we can refer back to the plots above, and move along the x-axis and observe that difference between orange and apple's _y_ value. 
+Following that, for to numerically observe "interaction" or "dependency", we would have to narrow down on group of estimated values. For example, for $$X$$ with 0, we take values from orange/apple values, and take the difference between the two values. This would give us the the is a unit difference between the fruit variables (orange vs apple) when $$X$$ is 0. We can again isolate when values of $$X$$ is 1, and repeat the difference between the two variables. Given that $$X$$ is a continous variable, i.e. not limited to just 0/1, we can repeat this process for other numerical values, and we can see that as $$X$$ changes, the unit difference between orange and apple are different, i.e. a fruit variable depends on $$X$$. Whereas, if we did this exercise of check each possible values of fruit variable for different $$X$$ in an additive model, the unit difference would remain the same, which would be the coefficient of the fruit variable. To make sense of this, we can refer back to the plots above, and move along the x-axis and observe that difference between orange and apple's _y_ value.
+
+<a class="anchor" id="modelbuilding"></a>
 
 ### Model Building Process
 In SLR, I highlighted $$R^2$$ as the metric to know if the model is "correct" or useful. This metric is also applicable for SLR, however, as mentioned above we can't merely rely on a high $$R^2$$ alone in deciding a good model, and to visualise it. When it comes to MLR, visualising it can be challenging as the number of dimensions have increased. Therefore we would now need to rely on other **metrics** to inform us if our MLR model is "correct"; these are _AIC_, _BIC_ and _log-likelihood_, all these information are provided in the output from statsmodel shown above when you execute `print(results.summary())`, located just below `R-squared` value. 
@@ -638,6 +629,9 @@ from scipy.stats import boxcox
 ## transform
 transformed = boxcox(x)
 ```
+
+<a class="anchor" id="polynomial"></a>
+
 ### Polynomials
 Another transformation that can be used for when data is non-linear is the polynomial regression/transformation. To perform a polynomial regression, we bring variable up in power, for example this is a second order polynomial:
 
@@ -667,7 +661,7 @@ So... it might be obvious, all these transformations would change the previous s
 <a class="anchor" id="beyond"></a>
 
 ## Beyond Linear Regression
-At the start of this post, I called linear model the 'swiss-army knife' of models, not just because of all its applications and versatility granted from data transformations above, but also for its generalization on the type of data it can model. For those that took basic stats course would know the examples I have been giving are modelling only continuous data, but there are other kinds of data such as discrete, categorical and ordinal. In my MLR example, I talked about categorical data as an independent variable, but this can also be modeled as a dependent variable. To achieve this with linear model, we rely on link function to transform the outcome into a range between 0-1 and we can further dichotomise it into a categorical outcome by choosing a cutoff e.g. 0.5 to split into 0/1. When dealing with binary outcome, this is a simple _logistic regression_, and the equation is the following:
+At the start of this post, I called linear model the 'swiss-army knife' of models, not just because of all its applications and versatility granted from data transformations above, but also for its generalization on the type of data it can model. For those that took basic stats course would know the examples I have been giving are modelling only continuous data, but there are other kinds of data such as discrete, categorical and ordinal. In my MLR example, I talked about categorical data as an independent variable, but this can also be modeled as a dependent variable. To achieve this with linear model, we rely on link function to transform the outcome into a range between 0-1 and we can further dichotomise it into a categorical outcome by choosing a cutoff e.g. 0.5 to split into 0/1. When dealing with binary outcome, this is a simple *_logistic regression_*, and the equation is the following:
 
 \begin{equation}
 Y\frac{1}{1+e^{-(\beta_0 + \beta_1 X)}}
@@ -701,6 +695,8 @@ results = model.fit()
 
 ## all other principles from before applies. 
 ```
+
+<a class="anchor" id="more"></a>
 
 #### Generalized Linear Model
 So what is this `GLM` that I prefer over `Logit`? GLM stands for generalized linear models, which is a this modelling framework that extends regression models to include many more data types than just continuous, and the `Binomial` version I chose is used for categorical outcomes (_Y_). For other 'families' of outcome that can be modelled, please visit this [link](https://www.statsmodels.org/stable/glm.html) which is extension through link functions.

@@ -1,0 +1,55 @@
+
+# sidebar navigation list sample
+lm-toc:
+  - title: "Simple Linear Regression"
+    children:
+      - title: "What is SLR?"
+        url: "/2022/12/11/linearregression/#what"
+      - title: "Assumptions"
+        url: "/2022/12/11/linearregression/#assumptions"
+      - title: "Interpretation"
+        url: "/2022/12/11/linearregression/#coef"
+  - title: "Why use SLR?"
+    children:
+      - title: "Hypothesis Testing"
+        url: "/2022/12/11/linearregression/#hypothesis"
+      - title: "Prediction"
+        url: "/2022/12/11/linearregression/#prediction"
+  - title: "How to know it is Working?"
+    children:
+      - title: "Coefficient of Determination, R2"
+        url: "/2022/12/11/linearregression/#r2"
+      - title: "Check Assumptions"
+        url: "/2022/12/11/linearregression/#check"
+  - title: "How to estimate Parameters?"
+    children:
+      - title: "Linear Algebra solution"
+        url: "/2022/12/11/linearregression/#how2"
+      - title: "Gradient Descent"
+        url: "/2022/12/11/linearregression/#gradient"
+  - title: "Multiple Linear Regression"
+    children:
+      - title: "Confounders"
+        url: "/2022/12/11/linearregression/#mlr"
+      - title: "Interaction Models"
+        url: "/2022/12/11/linearregression/#interaction"
+      - title: "Model Building Process"
+        url: "/2022/12/11/linearregression/#modelbuilding"
+  - title: "Data Transformation"
+    children:
+      - title: "Log"
+        url: "/2022/12/11/linearregression/#transformation"
+      - title: "Polynomials"
+        url: "/2022/12/11/linearregression/#polynomial"
+  - title: "Beyond Linear Regression"
+    children:
+      - title: "Logistic Regression"
+        url: "/2022/12/11/linearregression/#beyond"
+      - title: "And more..."
+        url: "/2022/12/11/linearregression/#more"
+  - title: "Summary"
+    url: "/2022/12/11/linearregression/#summary"
+  - title: "Appendix"
+    url: "/2022/12/11/linearregression/#appendix"
+  - title: "back to top"
+    url: "/2022/12/11/linearregression/#top"

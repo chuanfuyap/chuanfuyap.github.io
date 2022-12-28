@@ -1,10 +1,10 @@
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 
-.highlight {
+.highlight pre {
   padding: 10;
   border: 1px #C1C1C1; /*gives rounded border*/
-  border-radius: 5px;
+  border-radius: 3px;
   max-height:300px;
   width: auto;
   overflow: auto;
@@ -222,6 +222,11 @@
   color: #f92672;
 }
 .highlight {
+  padding: 10;
+  border: 1px #C1C1C1; /*gives rounded border*/
+  border-radius: 5px;
+
   color: #f8f8f2;
-  background-color: #2f363d;
+  /*background-color: #2f363d;*/
+  background-color: #24292e;
 }
