@@ -1,5 +1,5 @@
 ---
-title: "Fixing local Jekyll server launch issue (MacOS)"
+title: "Fixing local Jekyll server and Github Pages launch  issue (MacOS)"
 published: true
 tags: misc web
 description: "Perilous Beginning in Web Design - 3 min read"
