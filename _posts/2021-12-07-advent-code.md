@@ -4,8 +4,6 @@ published: true
 tags: python advent-code-2021
 description: "Chronicles of my (Failed) advent Puzzle Problem - 15 min read"
 ---
-by: [Yap Chuan Fu](https://chuanfuyap.github.io)
-
 _tldr; all the solutions are in this [repo](https://github.com/chuanfuyap/adventcode/tree/main/2021) in jupyter-notebook format marked by their days_
 
 _updated 21-12-2021: ending this on day 15_

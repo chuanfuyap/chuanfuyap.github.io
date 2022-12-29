@@ -7,10 +7,6 @@ sidebar:
   nav: lm-toc
 description: "Theory dive with application in Python - 35 min read"
 ---
-by: [Yap Chuan Fu](https://chuanfuyap.github.io)
-
-<a class="anchor" id="top"></a>
-
 tldr; This will be a crash course on Linear Regression for statistical analysis with code implementation in Python. It will have minimal explanation on the maths. Feel free to navigate to make use of the _Table of Contents_ on the left sidebar to skip to section of interest which would have theory and code on them, or [click here](https://github.com/chuanfuyap/mini-ds-projects/blob/main/linear-regression/regression-notes.ipynb) for code compilation. 
 
 # Prologue
@@ -217,6 +213,7 @@ The **LINE** assumption is of extreme importance when it comes to hypothesis tes
 There are various tests for this, coming in quantitative and qualitative flavors. I personally prefer the visualisation approach for this, with these three that covers all the assumptions:
 
 1) Residuals vs Fits plot
+
 ![resid-fit](https://raw.githubusercontent.com/chuanfuyap/mini-ds-projects/main/linear-regression/resid_fit.png?raw=true){:class="img-responsive" height="90%" width="90%"}{: style="display:block; margin-left: auto; margin-right: auto;"}
 
 This is a plot where the x-axis is the fitted values, values predicted by the model on data and y-axis is the residual of the model, where residual is the difference between actual _Y_ and predicted _Y_. This lets us check for **_linear_** and **_equal variance_** assumption.

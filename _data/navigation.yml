@@ -52,11 +52,11 @@ lm-toc:
   - title: "Appendix"
     url: "/2022/12/11/linearregression/#appendix"
   - title: "Back to Top"
-    url: "/2022/12/11/linearregression/#top"
+    url: "/2022/12/11/linearregression/"
 
 web-toc:
   - title: "The Top"
-    url: "/2022/12/28/webdesign2/#top"
+    url: "/2022/12/28/webdesign2/"
   - title: "Two main web components"
     url: "/2022/12/28/webdesign2/#html"
   - title: "Making sure CSS works"

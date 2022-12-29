@@ -4,8 +4,6 @@ published: true
 tags: misc web
 description: "Perilous Beginning in Web Design - 3 min read"
 ---
-by: [Yap Chuan Fu](https://chuanfuyap.github.io)
-
 **Hello world**, I have finally joined the modern world and obtained my own webpage thanks to the wonderful [GitHub Pages](https://pages.github.com) and [Jekyll](https://jekyllrb.com). _However_, my journey into this was not smooth sailing, and since GitHub Pages allows for easy blogging, I thought I'd share some of the challenges I faced and fixes I employed. Following headings are the challenges and body of text are the fixes and explanations. 
 
 As a preface, I am on MacOS Catalina 10.15, so if you are running windows or linux, this likely would not apply to you. 
