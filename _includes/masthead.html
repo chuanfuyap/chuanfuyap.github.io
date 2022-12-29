@@ -1,6 +1,6 @@
 {% if site.layout == 'stacked' %}
-  {% assign metadata_styles = 'd-md-inline-block mx-3 mb-1 mb-md-0' %}
-  {% assign post_metadata = 'd-flex flex-items-center flex-justify-center mb-3' %} 
+  {% assign metadata_styles = 'd-md-inline-flex flex-items-center mx-3 mb-1 mb-md-0' %}
+  {% assign post_metadata = 'd-md-inline-flex flex-items-center flex-justify-center  mx-1 mb-1 mb-md-0' %} 
 {% else %}
   {% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
 {% endif %}
@@ -80,3 +80,4 @@
 
 <!-- COMMENTS AT BOTTOM BECAUSE IF PLACED ON TOP WOULD HAVE BUG -->
 <!-- flex-items-center puts logo and text on same line, flex-justify-center puts object in the center -->
+<!-- {% assign post_metadata = 'd-flex flex-items-center flex-justify-center mb-3' %} -->
