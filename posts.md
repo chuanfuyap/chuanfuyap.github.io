@@ -1,5 +1,5 @@
 ---
-layout: default
-title: Collection of Posts I wrote
+layout: archive
+title: Collection of Posts
 ---
-TEST
+
