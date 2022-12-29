@@ -32,11 +32,16 @@
         </a>
       </div>
     {% endif %}
-    
     <div class="{% if page.path contains '_posts' %} {{ post_metadata }} {% else %} {{ metadata_styles }} {% endif %}">
       {% octicon person height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Person %}
       <a href="/about"{% if site.style == 'dark' %}class="text-white"{% endif %}>
         About Me
+      </a>
+    </div>
+    <div class="{% if page.path contains '_posts' %} {{ post_metadata }} {% else %} {{ metadata_styles }} {% endif %}">
+      {% octicon repo height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Repo %}
+      <a href="/posts"{% if site.style == 'dark' %}class="text-white"{% endif %}>
+        Posts
       </a>
     </div>
     {% if page.path contains '_posts' %}
