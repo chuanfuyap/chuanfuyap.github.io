@@ -27,3 +27,9 @@ Integrated Masters in Biochemistry, with final year project focusing on dynamic 
     Yap, C. F., Garcia Albornoz, M., Jarnuczak, A., Hubbard, S. & Schwartz, J-M.
     12 Jan 2021, Processes. 9, 139.
     DOI: 10.3390/pr9010139
+
+2) [Respiratory eukaryotic virome expansion and bacteriophage deficiency characterize childhood asthma](https://doi.org/10.1038/s41598-023-34730-7)
+
+    Megremis, S., Constantinides, B., Xepapadaki, P., Yap, C.F., Sotiropoulos, A.G., Bachert, C., Finotto, S., Jartti, T., Tapinos, A., Vuorinen, T., et al.
+    Sci. Rep. 13, 8319.
+    DOI: 10.1038/s41598-023-34730-7
