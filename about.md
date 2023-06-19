@@ -22,6 +22,8 @@ PhD in Bioinformatics, supervised by [Dr Jean-Marc Schwartz](https://www.researc
 #### MBiolSci, University of Sheffield,     2010-2014
 Integrated Masters in Biochemistry, with final year project focusing on dynamic model of macrophage infection by _Staph aureus_. 
 ## Publication
+> My list of publication in chronological order
+
 1) [Model Parameterization with Quantitative Proteomics: Case Study with Trehalose Metabolism in Saccharomyces cerevisiae](https://doi.org/10.3390/pr9010139)
     
     Yap, C. F., Garcia Albornoz, M., Jarnuczak, A., Hubbard, S. & Schwartz, J-M.
@@ -33,3 +35,6 @@ Integrated Masters in Biochemistry, with final year project focusing on dynamic 
     Megremis, S., Constantinides, B., Xepapadaki, P., Yap, C.F., Sotiropoulos, A.G., Bachert, C., Finotto, S., Jartti, T., Tapinos, A., Vuorinen, T., et al.
     23 May 2023, Sci. Rep. 13, 8319.
     DOI: 10.1038/s41598-023-34730-7
+
+3) A Proteomics study of Rheumatoid Arthritis patients on Etanercept identifies putative biomarkers associated with clinical outcome measures
+    - accepted for publication, waiting for publication
