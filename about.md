@@ -28,22 +28,7 @@ Integrated Masters in Biochemistry, with final year project focusing on dynamic 
 > My list of publication in chronological order
 
 1) [Model Parameterization with Quantitative Proteomics: Case Study with Trehalose Metabolism in Saccharomyces cerevisiae](https://doi.org/10.3390/pr9010139)
-> Yap, C. F., Garcia Albornoz, M., Jarnuczak, A., Hubbard, S. & Schwartz, J-M.
->
-> 12 Jan 2021, Processes. 9, 139.
->
-> DOI: 10.3390/pr9010139
 
 2) [Respiratory eukaryotic virome expansion and bacteriophage deficiency characterize childhood asthma](https://doi.org/10.1038/s41598-023-34730-7)
-> Megremis, S., Constantinides, B., Xepapadaki, P., Yap, C.F., Sotiropoulos, A.G., Bachert, C., Finotto, S., Jartti, T., Tapinos, A., Vuorinen, T., et al.
->
->23 May 2023, Sci. Rep. 13, 8319.
->
-> DOI: 10.1038/s41598-023-34730-7
 
 3) [A Proteomics study of Rheumatoid Arthritis patients on Etanercept identifies putative biomarkers associated with clinical outcome measures](https://doi.org/10.1093/rheumatology/kead321)
-> Ling, S.F.; Yap, C.F.; Nair, N.; Bluett, J.; Morgan, A.W.; Isaacs, J.D.; Wilson, A.G.; Hyrich, K.L.; Barton, A.; Plant, 
->
-> 30 June 2023, Rheumatology
-> 
-> DOI: 10.1093/rheumatology/kead321.
