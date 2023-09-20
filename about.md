@@ -32,3 +32,5 @@ Integrated Masters in Biochemistry, with final year project focusing on dynamic 
 2) [Respiratory eukaryotic virome expansion and bacteriophage deficiency characterize childhood asthma](https://doi.org/10.1038/s41598-023-34730-7)
 
 3) [A Proteomics study of Rheumatoid Arthritis patients on Etanercept identifies putative biomarkers associated with clinical outcome measures](https://doi.org/10.1093/rheumatology/kead321)
+
+4) [HLA-DRB1 and HLA-DQA1 associated with immunogenicity to adalimumab therapy in patients with rheumatoid arthritis](http://dx.doi.org/10.1136/ard-2023-223955)
