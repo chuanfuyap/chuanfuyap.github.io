@@ -8,10 +8,10 @@ sidebar:
 description: "Prompts for using LLM for programming part 2 - 5 min read"
 ---
 
-tldr; 'everything' you can do with LLM to help with your programming part 2, please click on the navigation to the left to hop about.
+tldr; principles/strategies for using LLM, please click on the navigation to the left to hop about.
 
 # Introduction
-With the advent of ChatGPT, large language model (LLM) or AI itself is now in heard and to an extent used by many people. There's plenty of use cases, but [deeplearning.ai](https://www.deeplearning.ai/short-courses/) have launched several short courses on generative AI; some of them were on how to use LLM for programming. Two courses that were of interest to me were:
+With the advent of ChatGPT, large language model (LLM) or AI itself is now in heard and to an extent used by many people. There's plenty of use cases, but [deeplearning.ai](https://www.deeplearning.ai/short-courses/) have launched several short courses on generative AI; some of them were on how to use LLM. Two courses that were of interest to me were:
 
 1) [Pair Programming with a LLM](https://www.deeplearning.ai/short-courses/pair-programming-llm/), this was built in collaboration with Google, which utilises PaLM LLM. Summarised in a different post over [here](/2023/09/28/pair-programming-llm/).
 
@@ -19,7 +19,7 @@ With the advent of ChatGPT, large language model (LLM) or AI itself is now in he
 
 Both courses were extremely interesting, and they taught me to write better prompts to make better use of LLM; This post will be compiling all the useful prompt strategies from _ChatGPT/OpenAI_'s course. For summary on the Google course, please click [here](/2023/09/28/pair-programming-llm/).
 
-**_Disclaimer_**: LLMs are not perfect, they suffer from 'hallucination' and make things up, so the code they generate should still be scrutinized and tested.
+**_Disclaimer_**: LLMs are not perfect, they suffer from 'hallucination' and make things up, so the output should still be scrutinized.
 
 ## OpenAI LLM API
 If interested in actually using OpenAI LLM, please follow this [link](https://www.howtogeek.com/885918/how-to-get-an-openai-api-key/) for instructions on how to secure an API key. But I believe these prompts should would with any LLM, though obviously results may differ. 
