@@ -38,12 +38,11 @@ The optional flag `-q` installs "quietly" without printing out details of the in
 The following is to import the model using the API key
 ```python
 import os
-from utils import get_api_key
 import google.generativeai as palm
 from google.api_core import client_options as client_options_lib
 
 palm.configure(
-    api_key=get_api_key(),
+    api_key=INSERT_FANCY_API_KEY_HERE, # REPLACE WITH YOUR OWN API KEY
     transport="rest",
     client_options=client_options_lib.ClientOptions(
         api_endpoint=os.getenv("GOOGLE_API_BASE"),

@@ -144,7 +144,7 @@ print(response)
 
 <a class="anchor" id="tactic3"></a>
 
-## Checl conditions are satisfied
+## Check conditions are satisfied
 Ask the model to check whether conditions are satisfied in the prompt.
 
 As an example, provide instructions to reformat a given text, ask the model to check whether the text can be reformatted according to instructions.
