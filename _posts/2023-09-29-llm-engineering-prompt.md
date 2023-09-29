@@ -21,197 +21,245 @@ Both courses were extremely interesting, and they taught me to write better prom
 
 **_Disclaimer_**: LLMs are not perfect, they suffer from 'hallucination' and make things up, so the code they generate should still be scrutinized and tested.
 
-## PaLM LLM API
-If interested in actually using PaLM LLM, please follow this [link](https://developers.generativeai.google/tutorials/setup) to get an API for yourself and access it. But I believe these prompts should would with any LLM, though obviously results may differ. 
+## OpenAI LLM API
+If interested in actually using OpenAI LLM, please follow this [link](https://www.howtogeek.com/885918/how-to-get-an-openai-api-key/) for instructions on how to secure an API key. But I believe these prompts should would with any LLM, though obviously results may differ. 
+
+### Further Notes on using the OpenAI API (taken from the notes)
+
+To install the OpenAI Python library:
+```
+!pip install openai
+```
+
+The library needs to be configured with your account's secret key, which is available on the [website](https://platform.openai.com/account/api-keys). 
+
+You can either set it as the `OPENAI_API_KEY` environment variable before using the library:
+ ```
+ !export OPENAI_API_KEY='sk-...'
+ ```
+
+Or, set `openai.api_key` to its value:
+
+```
+import openai
+openai.api_key = "sk-..."
+```
 
 <a class="anchor" id="import"></a>
+
+
 
 # Import and setting up model
 The following is to import the model using the API key
 ```python
+import openai
 import os
-from utils import get_api_key
-import google.generativeai as palm
-from google.api_core import client_options as client_options_lib
 
-palm.configure(
-    api_key=get_api_key(),
-    transport="rest",
-    client_options=client_options_lib.ClientOptions(
-        api_endpoint=os.getenv("GOOGLE_API_BASE"),
+from dotenv import load_dotenv, find_dotenv
+_ = load_dotenv(find_dotenv())
+
+openai.api_key  = os.getenv('OPENAI_API_KEY')
+
+def get_completion(prompt, model="gpt-3.5-turbo"):
+    messages = [{"role": "user", "content": prompt}]
+    response = openai.ChatCompletion.create(
+        model=model,
+        messages=messages,
+        temperature=0, # this is the degree of randomness of the model's output
     )
-)
-
-# select model for text generation, which is what we need 
-# there's other models available in PaLM
-models = [m for m in palm.list_models() if 'generateText' in m.supported_generation_methods]
-model_bison = models[0]
-model_bison
-
-from google.api_core import retry
-@retry.Retry() # decorator used to retry connection to google api if it fails
-def generate_text(prompt, 
-                  model=model_bison, 
-                  temperature=0.0):
-    "the temperature is 'randomness' of the LLM, higher more random"
-    return palm.generate_text(prompt=prompt,
-                              model=model,
-                              temperature=temperature)
+    return response.choices[0].message["content"]
 ```
 
-<a class="anchor" id="template"></a>
 
-# General Template for Everything
-One thing highlight from the speaker is that 'priming' the LLM is really important, example below.
+<a class="anchor" id="principle"></a>
 
+# Prompting Principles
+- **Principle 1: Write clear and specific instructions**
+- **Principle 2: Give the model time to “think”**
+
+## Example Code using OpenAI LLM
 ```python
-prompt_template = """
-{priming}
-
-{question}
-
-{decorator}
-
-Your solution:
+text = f"""
+You should express what you want a model to do by \ 
+providing instructions that are as clear and \ 
+specific as you can possibly make them. \ 
+This will guide the model towards the desired output, \ 
+and reduce the chances of receiving irrelevant \ 
+or incorrect responses. Don't confuse writing a \ 
+clear prompt with writing a short prompt. \ 
+In many cases, longer prompts provide more clarity \ 
+and context for the model, which can lead to \ 
+more detailed and relevant outputs.
 """
-
-priming_text = "You are an expert at writing clear, concise, Python code."
-question = "create a doubly linked list"
-decorator = "Insert comments for each line of code."
-
-# PUT TOGETHER AND EXECUTE
-prompt = prompt_template.format(priming=priming_text,
-                                question=question,
-                                decorator=decorator)
-
-## Call the API to get the completion (which is the output from the LLM)
-completion = generate_text(prompt)
-print(completion.result)
-```
-
-# The Programming Prompts 
-From here on, all 'question' space is the code you wish to get help with. The priming is fixed for the given use case.
-
-The obvious thing left out is 'please write XYZ code for me' because this is about pair-programming.
-
-<a class="anchor" id="improve"></a>
-
-## Improve existing code
-```python
-prompt_template = """
-I don't think this code is the best way to do it in Python, can you help me?
-
-{question}
-
-Please explain, in detail, what you did to improve it.
+prompt = f"""
+Summarize the text delimited by triple backticks \ 
+into a single sentence.
+```{text}```
 """
-
-completion = generate_text(
-    prompt = prompt_template.format(question=question)
-)
-print(completion.result)
+response = get_completion(prompt)
+print(response)
 ```
 
-Alternative decorator:
+<a class="anchor" id="tactic1"></a>
 
+# Write clear and specific instructions
+
+## Use delimiter
+Use delimiters to clearly indicate distinct parts of the input
+- Delimiters can be anything like: ```, """, < >, `<tag> </tag>`, `:`
+
+Example
 ```python
-Please explore multiple ways of solving the problem, and explain each.
-
-
-Please explore multiple ways of solving the problem, and tell me which is the most Pythonic
-```
-<a class="anchor" id="simplify"></a>
-
-## Simplify code 
-
-```python
-# option 1
-prompt_template = """
-Can you please simplify this code for a linked list in Python?
-
-{question}
-
-Explain in detail what you did to modify it, and why.
-"""
-
-# option 2
-prompt_template = """
-Can you please simplify this code for a linked list in Python? \n
-You are an expert in Pythonic code.
-
-{question}
-
-Please comment each line in detail, \n
-and explain in detail what you did to modify it, and why.
+text = f"""
+You should express what you want a model to do by \ 
+providing instructions that are as clear and \ 
+specific as you can possibly make them. \ 
+This will guide the model towards the desired output, \ 
+and reduce the chances of receiving irrelevant \ 
+or incorrect responses. Don't confuse writing a \ 
+clear prompt with writing a short prompt. \ 
+In many cases, longer prompts provide more clarity \ 
+and context for the model, which can lead to \ 
+more detailed and relevant outputs.
 """
 ```
 
-<a class="anchor" id="test"></a>
+<a class="anchor" id="tactic2"></a>
 
-## Write test case
-This one is interesting as in can create tests for functions you do not originally have, which in turn is basically recommending how to improve your code.
+## Structured output
+Ask for a structured output
+- This is useful for when you want to get a specific output from the model, such as a list, a table, or a dictionary or in JSON or HTML format.
 
-NOTE: It may help to specify that you want the LLM to output "in code" to encourage it to write unit tests instead of just returning test cases in English.
-
+Example
 ```python
-prompt_template = """
-Can you please create test cases in code for this Python code?
+prompt = f"""
+Generate a list of three made-up book titles along \ 
+with their authors and genres. 
+Provide them in JSON format with the following keys: 
+book_id, title, author, genre.
+"""
+response = get_completion(prompt)
+print(response)
+```
 
-{question}
+<a class="anchor" id="tactic3"></a>
 
-Explain in detail what these test cases are designed to achieve.
+## Checl conditions are satisfied
+Ask the model to check whether conditions are satisfied in the prompt.
+
+As an example, provide instructions to reformat a given text, ask the model to check whether the text can be reformatted according to instructions.
+
+<a class="anchor" id="tactic4"></a>
+
+## "Few-shot" prompting
+Few-shot prompting is a technique that allows you to provide a small amount of training data to the model to help it learn how to perform a task.
+
+As an example, start a sentence with a few words, and ask the model to complete the sentence. Or start an essay with a writing style, and ask the model to continue writing in that style.
+
+<a class="anchor" id="tactic5"></a>
+
+# Give the model time to “think”¶
+
+## Specify the steps
+Specify the steps required to complete a task.
+
+Example:
+```python
+# example 1
+prompt_1 = f"""
+Perform the following actions: 
+1 - Summarize the following text delimited by triple \
+backticks with 1 sentence.
+2 - Translate the summary into French.
+3 - List each name in the French summary.
+4 - Output a json object that contains the following \
+keys: french_summary, num_names.
+
+Separate your answers with line breaks.
+Text:
+```{text}```
+"""
+
+# example 2
+prompt_2 = f"""
+Your task is to perform the following actions: 
+1 - Summarize the following text delimited by 
+  <> with 1 sentence.
+2 - Translate the summary into French.
+3 - List each name in the French summary.
+4 - Output a json object that contains the 
+  following keys: french_summary, num_names.
+
+Use the following format:
+Text: <text to summarize>
+Summary: <summary>
+Translation: <summary translation>
+Names: <list of names in Italian summary>
+Output JSON: <json with summary and num_names>
+
+Text: <{text}>
 """
 ```
 
-<a class="anchor" id="efficient"></a>
+## Work out the solution
+Instruct the model to work out its own solution before rushing to a conclusion.
 
-## Make code more efficient
-```python
-prompt_template = """
-Can you please make this code more efficient?
+```python 
 
-{question}
+prompt = f"""
+Your task is to determine if the student's solution \
+is correct or not.
+To solve the problem do the following:
+- First, work out your own solution to the problem. 
+- Then compare your solution to the student's solution \ 
+and evaluate if the student's solution is correct or not. 
+Don't decide if the student's solution is correct until 
+you have done the problem yourself.
 
-Explain in detail what you changed and why.
-"""
+Use the following format:
+Question:
+
+question here
+
+Student's solution:
+
+student's solution here
+
+Actual solution:
+
+steps to work out the solution and your solution here
+
+Is the student's solution the same as actual solution \
+just calculated:
+
+yes or no
+
+Student grade:
+
+correct or incorrect
+
+
+Question:
+
+I'm building a solar power installation and I need help \
+working out the financials. 
+- Land costs $100 / square foot
+- I can buy solar panels for $250 / square foot
+- I negotiated a contract for maintenance that will cost \
+me a flat $100k per year, and an additional $10 / square \
+foot
+What is the total cost for the first year of operations \
+as a function of the number of square feet.
+
+Student's solution:
+
+Let x be the size of the installation in square feet.
+Costs:
+1. Land cost: 100x
+2. Solar panel cost: 250x
+3. Maintenance cost: 100,000 + 100x
+Total cost: 100x + 250x + 100,000 + 100x = 450x + 100,000
 ```
-
-<a class="anchor" id="debug"></a>
-
-## Debug your code
-```python
-prompt_template = """
-Can you please help me to debug this code?
-
-{question}
-
-Explain in detail what you found and why it was a bug.
-"""
-```
-
-<a class="anchor" id="explain"></a>
-
-## Explain complex code base
-```python
-prompt_template = """
-Can you please explain how this code works?
-
-{question}
-
-Use a lot of detail and make it as clear as possible.
-"""
-```
-
-<a class="anchor" id="document"></a>
-
-## Document a complex code base
-```python
-prompt_template = """
-Please write technical documentation for this code and \n
-make it easy for a non swift developer to understand:
-
-{question}
-
-Output the results in markdown
+Actual solution:
 """
 ```

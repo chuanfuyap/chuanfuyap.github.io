@@ -24,6 +24,14 @@ Both courses were extremely interesting, and they taught me to write better prom
 ## PaLM LLM API
 If interested in actually using PaLM LLM, please follow this [link](https://developers.generativeai.google/tutorials/setup) to get an API for yourself and access it. But I believe these prompts should would with any LLM, though obviously results may differ. 
 
+### Further Notes on using the PaLM API (taken from the notes)
+If you wanted to use the PaLM API on your own machine, you would first install the library:
+```Python
+!pip install -q google.generativeai
+```
+The optional flag `-q` installs "quietly" without printing out details of the installation.
+
+
 <a class="anchor" id="import"></a>
 
 # Import and setting up model
