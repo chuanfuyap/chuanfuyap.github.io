@@ -17,17 +17,19 @@ If you stumble upon this and cannot follow any of this, I do apologize as I coll
 
 ## Basics of Neural Network
 Neural network (NN) is layers of neurons that maps input to output through hidden layers. There are 3 main sections of NN:
-1) Input Layer - takes in the data, number of neurons would usually be number of features of data.
-2) Hidden Layer(s) - Number of layers of number of neurons within them are hyperparameters to be tuned/decided.
-3) Output Layer - the layer that gives the output.
+
+1. Input Layer - takes in the data, number of neurons would usually be number of features of data.
+2. Hidden Layer(s) - Number of layers of number of neurons within them are hyperparameters to be tuned/decided.
+3. Output Layer - the layer that gives the output.
 
 NN can be thought as linear model on linear model with multiple nodes in a layer passing its output to the next layer, until the output layer.
 
 The neurons within these would have their own activation function (AF) that "transforms" the values of previous layer's. There are various options to AF that includes:
-1) Sigmoid Function
-2) Tanh Function
-3) Rectified Linear Unit (ReLU)
-4) Leaky ReLU
+
+1. Sigmoid Function
+2. Tanh Function
+3. Rectified Linear Unit (ReLU)
+4. Leaky ReLU
 
 The AF of choice does not have to be the same across all layers, each layer can have a different AF from others.
 
@@ -49,14 +51,14 @@ For ML, to take in image data are represented intensity of pixel value, (in a bl
 <a class="anchor" id="steps"></a>
 
 ## Main steps in NN
-1) Define that network layers and its nodes count.
-2) Initialize values for parameters, which are the weights and biase(random values for weights, zero for bias).
+1. Define that network layers and its nodes count.
+2. Initialize values for parameters, which are the weights and biase(random values for weights, zero for bias).
     - weights need to be initialized with random values to break symmetry during optimization.
-3) Optimize the parameters by:
+3. Optimize the parameters by:
     - computing loss/cost with forward propagation
     - obtain derivatives with back-propagation
     - update parameters with gradient descent (or its variants)
-4) use learned parameters to predict the outcome. 
+4. use learned parameters to predict the outcome. 
 
 <a class="anchor" id="shallow"></a>
 
@@ -74,22 +76,24 @@ Deep NN are NN with more than one hidden layer. If writing the NN by hand, there
 
 ### Hyperparameters
 Hyperparameters are parameters that are not learned by the model, but are set by the user. These includes:
-1) Number of hidden layers, _L_
-2) Number of nodes in each hidden layer, _n_
-3) Learning rate, _α_
-4) Choice of Activation Function
-5) Number of training iterations
-6) Choice of optimization algorithm, and their hyperparameters (e.g. momentum, mini-batch size, etc.)
-7) Regularization hyperparameters (e.g. L2 regularization parameter, dropout hyperparameters)
+
+1. Number of hidden layers, _L_
+2. Number of nodes in each hidden layer, _n_
+3. Learning rate, _α_
+4. Choice of Activation Function
+5. Number of training iterations
+6. Choice of optimization algorithm, and their hyperparameters (e.g. momentum, mini-batch size, etc.)
+7. Regularization hyperparameters (e.g. L2 regularization parameter, dropout hyperparameters)
 
 Choosing hyperparameters is an art, and there is no clear way to do it. It is usually done by trial and error, and experience.
 
 The order importance for hyperparameters are:
-1) Learning rate, _α_
-2) Number of hidden units, _n_
-3) Optimization algorithm's hyperparameters, e.g. momentum, mini-batch size, etc.
-4) Number of layers, _L_
-5) Learning rate decay
+
+1. Learning rate, _α_
+2. Number of hidden units, _n_
+3. Optimization algorithm's hyperparameters, e.g. momentum, mini-batch size, etc.
+4. Number of layers, _L_
+5. Learning rate decay
 
 Basic idea of tuning hyperparameters is to start with random values. Use a coarse to fine approach, where we start with a wide range of values, then narrow down to the best value.
 
@@ -157,13 +161,14 @@ Along the previous note on single number evaluation metrics, when we have multip
 <a class="anchor" id="optimize"></a>
 
 ## Optimization Algorithms
-1) Gradient Descent (The original), which uses all data points to update the parameters. This is slow for large datasets. Best used when the dataset is small (less than 2000 samples).
-2) Stochastic Gradient Descent (SGD), which is a variant of GD that uses single data point to update the parameters. But the path to the minima is not smooth.
-3) Mini-batch Gradient Descent, which is a variant of GD that uses a batch of data points to update the parameters. This is the most popular method.
+
+1. Gradient Descent (The original), which uses all data points to update the parameters. This is slow for large datasets. Best used when the dataset is small (less than 2000 samples).
+2. Stochastic Gradient Descent (SGD), which is a variant of GD that uses single data point to update the parameters. But the path to the minima is not smooth.
+3. Mini-batch Gradient Descent, which is a variant of GD that uses a batch of data points to update the parameters. This is the most popular method.
     - choosing mini-batch size is a hyperparameter, but it must fit in the CPU/GPU memory. Further, it should be a power of 2, e.g. 64, 128, 256, etc.
-4) Momentum, which is a variant of GD that uses the average of gradients to update the parameters. Need to tune the hyperparameter β, which is the momentum parameter.
-5) RMSprop, which is a variant of GD that uses the average of squared gradients to update the parameters. Need to tune the hyperparameter β, which is the momentum parameter.
-6) Adam, which is a variant of GD that uses the average of gradients and squared gradients to update the parameters (combination of momentum and RMSprop). Need to tune the hyperparameters β1 and β2, which are the momentum parameters. 
+4. Momentum, which is a variant of GD that uses the average of gradients to update the parameters. Need to tune the hyperparameter β, which is the momentum parameter.
+5. RMSprop, which is a variant of GD that uses the average of squared gradients to update the parameters. Need to tune the hyperparameter β, which is the momentum parameter.
+6. Adam, which is a variant of GD that uses the average of gradients and squared gradients to update the parameters (combination of momentum and RMSprop). Need to tune the hyperparameters β1 and β2, which are the momentum parameters. 
 
 <a class="anchor" id="approaches"></a>
 
@@ -185,21 +190,21 @@ Softmax regression is a generalization of logistic regression to _C_ classes. It
 
 ## ML strategy to improve models
 ### To fix poor training result
-1) Change network architecture
-2) Change optimization algorithm
-3) Early stopping
+1. Change network architecture
+2. Change optimization algorithm
+3. Early stopping
 
 ### To fix poor dev result
-1) Regularization
-2) Bigger training set
-3) Change network architecture
+1. Regularization
+2. Bigger training set
+3. Change network architecture
 
 ### To fix poor test result
-1) Bigger dev set
+1. Bigger dev set
 
 ### To fix overfitting (poor generalization on real world data)
-1) Change dev set
-2) Change cost function
+1. Change dev set
+2. Change cost function
 
 ## Error Analysis
 Error analysis is a technique to determine the cause of error in the model. It is done by manually examining the errors in the dev set, that is pick out all the bad/wrong predictions and go through them one by one to determine what could be the source. For example it could be mislabelled data, or the model is not trained on that type of data. One approach is to have a spreadsheet and columns for the error type, then sum up number of errors for each type. Determine which is the most cost effective to focus on. 
@@ -210,9 +215,9 @@ Error analysis is a technique to determine the cause of error in the model. It i
 Transfer learning is a technique to use a pre-trained model and apply it to a new problem. This is useful when the new problem has a small dataset. The pre-trained model can be trained on a large dataset, and the weights can be used as a starting point for the new problem. For example, NN trained to classify cat images, we can take parts of the knowledge to read X-ray images. 
 
 ### How to apply transfer learning
-1) Take the pre-trained model, and remove the last layer, or last two layers.
-2) Add a new layer with the number of classes of the new problem.
-3) Train the new layer on the new dataset. This is also known as fine-tuning.
+1. Take the pre-trained model, and remove the last layer, or last two layers.
+2. Add a new layer with the number of classes of the new problem.
+3. Train the new layer on the new dataset. This is also known as fine-tuning.
 
 ## Multi-task Learning
 Multi-task learning is a technique to train a single NN to perform multiple tasks. This is useful when the tasks have similar features. For example, computer vision, when we want to classify multiple objects in an image. This is not to be confused with softmax regression. 
