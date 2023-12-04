@@ -15,7 +15,7 @@ With the advent of ChatGPT, large language model (LLM) or AI itself is now in he
 
 1) [Pair Programming with a LLM](https://www.deeplearning.ai/short-courses/pair-programming-llm/), this was built in collaboration with Google, which utilises PaLM LLM. Summarised in the current post.
 
-2)  [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) this was built with OpenAI which uses ChatGPT LLM. Summarised in a different post over [here](/2023/09/29/llm-engineering-prompt/).
+2) [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) this was built with OpenAI which uses ChatGPT LLM. Summarised in a different post over [here](/2023/09/29/llm-engineering-prompt/).
 
 Both courses were extremely interesting, and they taught me to write better prompts to make better use of LLM; in this case, to get better help with programming. This post will be compiling all the useful code and prompts as well as their respective use cases from _Google_'s course. For summary on the ChatGPT course, please click [here](/2023/09/29/llm-engineering-prompt/).
 
