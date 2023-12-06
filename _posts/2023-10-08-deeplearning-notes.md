@@ -112,7 +112,11 @@ Over time hyperparameters can get 'stale', this could be due to machine being up
 Applied ML is an iterative process, where we would have an idea, build a model, test it, and repeat.
 
 ### Train/dev/test distributions
-To test the models, we need train/dev/test sets. Dev set are also known as holdout or cross-validation set. Small dataset (<2000 samples) would make use of 60/20/20 split, while large data would use 98/1/1 split or 99.5/0.25/0.25 split. 
+To test/evaluate the models, we need train/dev/test sets. Dev set are also known as holdout or cross-validation set. Small dataset (<2000 samples) would make use of 60/20/20 split, while large data would use 98/1/1 split or 99.5/0.25/0.25 split.
+
+The idea here is to use the dev set to tune the hyperparameters (think develop the model), and use the test set to evaluate the tuned model. Depending on the split, after tuning the hyperparameters, we can retrain the model with the dev set (train+dev set) using the optimal hyperparameters found and evaluate the model with the test set. 
+
+In machine learning, nested K-fold cross-validation (CV) is done, where the data is split into K folds (the outer CV loop), and K-1 folds are used for training, and the remaining fold is used for testing/evaluation. This is repeated K times, where each fold is used as the test set once. Using the outer training set, we can further split it into train and dev set (the inside CV loop), where the train set is used for training, and the dev set is used for tuning the hyperparameters. This is typically computationally intensive, so is NN training, therefore nested CV is not usually done for NN.
 
 It is important to make sure that the data are representative of the population and the dev/test come from the same distribution, and that the data are shuffled before splitting.
 
