@@ -364,7 +364,7 @@ LLM can be used for text transformation tasks such as:
 - format conversion. (Translate the following python dictionary from JSON to an HTML \
 table with column headers and title: {data_json})
 
-Like abovem we can combined all of the above, for example translating langauge in a given tone or format. 
+Like above we can combined all of the above, for example translating langauge in a given tone or format. 
 
 
 <a class="anchor" id="expanding"></a>
