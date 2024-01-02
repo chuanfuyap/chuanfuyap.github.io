@@ -10,6 +10,11 @@ description: "Prompts for using LLM for programming part 2 - 5 min read"
 
 tldr; principles/strategies for using LLM, please click on the navigation to the left to hop about.
 
+UPDATED: 2024-01-02 with more principles from [OpenAI](https://platform.openai.com/docs/guides/prompt-engineering/six-strategies-for-getting-better-results?utm_source=tldrnewsletter), further resources provided by them, a [cookbook](https://cookbook.openai.com), and [other guides](https://cookbook.openai.com/articles/related_resources).
+The extra things are:
+- include more details in prompts. e.g. if you want to summarise a text, include the number of sentences you want the summary to be.
+- instruct model to adopt a persona. e.g. if you want to summarise a text, tell the model to summarise it as if it was a news article.
+
 # Introduction
 With the advent of ChatGPT, large language model (LLM) or AI itself is now in heard and to an extent used by many people. There's plenty of use cases, but [deeplearning.ai](https://www.deeplearning.ai/short-courses/) have launched several short courses on generative AI; some of them were on how to use LLM. Two courses that were of interest to me were:
 
@@ -74,6 +79,9 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 # Prompting Principles
 - **Principle 1: Write clear and specific instructions**
 - **Principle 2: Give the model time to “think”**
+
+UPDATED Principles from OpenAI:
+- **Principle 3: Adopt **
 
 ## Example Code using OpenAI LLM
 ```python
