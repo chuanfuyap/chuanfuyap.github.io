@@ -36,3 +36,5 @@ Integrated Masters in Biochemistry, with final year project focusing on dynamic 
 4) [HLA-DRB1 and HLA-DQA1 associated with immunogenicity to adalimumab therapy in patients with rheumatoid arthritis](http://dx.doi.org/10.1136/ard-2023-223955)
 
 5) [Using polygenic risk scores to aid diagnosis of patients with early inflammatory arthritis: results from the Norfolk Arthritis Register](https://doi.org/10.1002/art.42760)
+
+6) [Methods for Multi-Ancestry Genome-Wide Association Study Meta-Analysis](http://doi.org/10.1111/ahg.12572)
