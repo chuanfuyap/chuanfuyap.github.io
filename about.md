@@ -33,8 +33,10 @@ Integrated Masters in Biochemistry, with final year project focusing on dynamic 
 
 3) [A Proteomics study of Rheumatoid Arthritis patients on Etanercept identifies putative biomarkers associated with clinical outcome measures](https://doi.org/10.1093/rheumatology/kead321)
 
-4) [HLA-DRB1 and HLA-DQA1 associated with immunogenicity to adalimumab therapy in patients with rheumatoid arthritis](http://dx.doi.org/10.1136/ard-2023-223955)
+4) [Exploring the Impact of Airway Microbiome on Asthma Morbidity: A Focus on the “Constructing a ‘Eubiosis Reinstatement Therapy’ for Asthma—CURE” Project](https://doi.org/10.1007/s41030-024-00261-3)
 
-5) [Using polygenic risk scores to aid diagnosis of patients with early inflammatory arthritis: results from the Norfolk Arthritis Register](https://doi.org/10.1002/art.42760)
+5) [HLA-DRB1 and HLA-DQA1 associated with immunogenicity to adalimumab therapy in patients with rheumatoid arthritis](http://dx.doi.org/10.1136/ard-2023-223955)
 
-6) [Methods for Multi-Ancestry Genome-Wide Association Study Meta-Analysis](http://doi.org/10.1111/ahg.12572)
+6) [Using polygenic risk scores to aid diagnosis of patients with early inflammatory arthritis: results from the Norfolk Arthritis Register](https://doi.org/10.1002/art.42760)
+
+7) [Methods for Multi-Ancestry Genome-Wide Association Study Meta-Analysis](http://doi.org/10.1111/ahg.12572)
