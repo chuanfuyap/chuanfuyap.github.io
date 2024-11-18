@@ -524,7 +524,7 @@ The visualisation shown above gives good understanding of interaction effect and
 Y=\beta_0 + \beta_1 X_1+ \beta_2 X_2 + \beta_{1,2}(X_1X_2)
 \end{equation}
 
-Just as before the $$beta_1$$ is effect per unit of $$X_1$$ while other $$beta$$ is kept constant, but if $$X_2$$ is not zero, and there is an interaction, the new effect of $$X_1$$ would be $$\beta_1 + \beta_{1,2}X_2$$. The $$\beta_{1,2}$$ is the interaction effect, and its impact changes per unit of $$X_2$$, and in the event of categorical predictors, it would mean the effect on the presence of the other variable.
+Just as before the $$\beta_1$$ is effect per unit of $$X_1$$ while other $$\beta$$ is kept constant, but if $$X_2$$ is not zero, and there is an interaction, the new effect of $$X_1$$ would be $$\beta_1 + \beta_{1,2}X_2$$. The $$\beta_{1,2}$$ is the interaction effect, and its impact changes per unit of $$X_2$$, and in the event of categorical predictors, it would mean the effect on the presence of the other variable.
 
 <a class="anchor" id="modelbuilding"></a>
 
