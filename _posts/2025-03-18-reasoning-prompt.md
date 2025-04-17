@@ -1,0 +1,110 @@
+---
+title: "Summary notes from 'Reasoning with o1' "
+published: true
+tags: llm python 
+sidebar:
+  title: "Skip Buttons"
+  nav: llm-toc3
+description: "Prompts for using LLM for programming part 3 - 5 min read"
+---
+
+tldr; principles/strategies for using reasoning models (LLM with chain of thoughts), please click on the navigation to the left to hop about.
+
+# Introduction
+Another course by DeepLearning AI, [Reasoning with o1](https://learn.deeplearning.ai/courses/reasoning-with-o1/lesson/h8dkv/introduction). This course covers the new chain of thought models where the model can reason through a series of queries, a.k.a gives the model '_time to think_', making it good for **reasoning and planning**. It will teach us the best task for this model and how to use it effectively, as well as how to use it in combination with other models. 
+
+Reminder that OpenAI [cookbook](https://cookbook.openai.com) exists, which is collection of their examples for specific topics. 
+
+**_Disclaimer_**: LLMs are not perfect, they suffer from 'hallucination' and make things up, so the output should still be scrutinized.
+
+<a class="anchor" id="what"></a>
+
+# What is o1
+Previous LLMs were "children" answering questions with the first thing that comes to mind, but the new reasoning models think before the speak with the chain of thought framwork. o1 is a new reasoning model. Two version of reasoning available in ChatGPT/openAI, o1 and o1-mini. o1 is good for compelx task for broad general knowledge, o1-mini is good for coding/math/science. 
+
+Recommended use case for o1:
+1. Data analysis for complex datasets. 
+2. Mathematical problem-solving, deriving solutions or proofs for challenging mathematical questions.
+3. Experimental design.
+4. Scientific coding, writing and debugging specialised code for computational fluid dynamics models or astrophysics simulation. 
+5. Biological & chemical reasoning, things that need deep domain knowledge.
+6. Algorithm development, aiding in creating or optimizing algorithms for data analysis workflows in computational neuroscience or bioinformatics.
+7. Literature synthesis, reasoning across multiple research papers to form coherent conclusions in interdiciplinary fields such as systems biology. 
+
+<a class="anchor" id="prompting"></a>
+
+# Prompting with o1
+4 principles for prompting the o1 model:
+
+1. Be simple and direct. 
+  - Write prompts that are straightforward and concise. Direct instructions yield the best results with the o1 models. 
+2. No explicit Chain of Thoughts (CoT) required.
+  - o1 models can infer and execute CoT itself without detailed breakdowns. 
+3. Use structure
+  - Break down complex prompts into sections using delimiters like markdown, XML tags or quotes. This enhances model accuracy and simplifies troubleshooting. 
+4. Show rather than tell
+  - Rather than using excessive explanation, give a contextual example. this gives the model understanding of the broad domain of the task. 
+
+<a class="anchor" id="planning"></a>
+
+# Planning with o1
+o1 is great at planning, but given the latency and cost, it would be best to execute them with gpt4 model. 
+
+We can specify to the o1 that it will have access to gpt4 as agent and what functions it can execute. This is more for using the API to set up calling the LLMs and executing things. The example given was looking at stocks and deciding if it needed to order more things. 
+
+<a class="anchor" id="coding"></a>
+
+# Coding with o1
+Simple and direct prompt is the best, here is an example:
+
+```python
+"""Create an elegant, delightful React component for an Interview Feedback Form where:
+
+1. The interviewer rates candidates across multiple dimensions using rubrics
+2. Each rating must include specific evidence/examples
+3. The final recommendation should auto-calculate based on a weighted scoring system
+4. The UI should guide interviewers to give specific, behavioral feedback
+
+The goal is to enforce structured, objective feedback gathering. A smart model should:
+- Create a thoughtful rubric structure
+- Add helpful prompts/placeholders
+- Build in intelligent validation
+
+Make sure to
+ - Call the element FeedbackForm
+ - Start the code with "use client"
+
+Respond with the code only! Nothing else!"""
+```
+
+One thing we can also do is to run this iteratively, i.e. get o1 to generate code then get o1 to assess/grade the code. 
+
+<a class="anchor" id="images"></a>
+
+# Reasoning with images
+
+The demo in the class basically how much better o1 than gpt4 is at interpreting images. The demo gave a organization chart and answer things bout the chart effectively. It does this by reading the image and extracting information in Json format, which is used to answer questions. 
+
+<a class="anchor" id="meta"></a>
+
+# Meta-Prompting
+
+This is a concept where we can use LLMs to generate prompts for other LLMs, namely use o1 to generate prompt for gpt4. Idea here is that we have a set of evaluation criteria which is used to optimize the gpt4 prompt generated by o1.
+
+The example seem to be more training an AI agent, such as a chatbot to deal with customer service. 
+
+Steps:
+1. Generate gpt4 routine, e.g.
+  - o1: read policy
+  - o2: generate gpt4 routine to implement policy
+
+2. Evaluation
+  - have a set of evaluation criteria to evaluate the gpt4 routine
+
+3. Improve gpt4 routine
+  - evaluate -> score
+  - provide o1 with:
+    - initial policy
+    - current gpt4 routine
+    - evaluation results
+  - then prompt o1 to improve the gpt4 routine by addressing the evaluation results
