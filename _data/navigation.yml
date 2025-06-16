@@ -193,7 +193,7 @@ llm-toc3:
 dim-red:
   - title: "Dimensionality Reduction Summary"
     url: "/2025/06/16/dimension-reduction/"
-  - title: "PCA1"
+  - title: "PCA"
     url: "/2025/06/16/dimension-reduction/#pca"
   - title: "t-SNE"
     url: "/2025/06/16/dimension-reduction/#tnse"
