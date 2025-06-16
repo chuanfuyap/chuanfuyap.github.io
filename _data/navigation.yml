@@ -189,3 +189,15 @@ llm-toc3:
     url: "/2025/03/18/reasoning-prompt/#images"
   - title: "Meta-prompting"
     url: "/2025/03/18/reasoning-prompt/#meta"
+
+dim-red:
+  - title: "Dimensionality Reduction Summary"
+    url: "/2025/06/16/dimension-reduction/"
+  - title: "PCA1"
+    url: "/2025/06/16/dimension-reduction/#pca"
+  - title: "t-SNE"
+    url: "/2025/06/16/dimension-reduction/#tnse"
+  - title: "UMAP"
+    url: "/2025/06/16/dimension-reduction/#umap"
+  - title: "Link to Examples"
+    url: "/2025/06/16/dimension-reduction/#examples"
