@@ -196,7 +196,7 @@ dim-red:
   - title: "PCA"
     url: "/2025/06/16/dimension-reduction/#pca"
   - title: "t-SNE"
-    url: "/2025/06/16/dimension-reduction/#tnse"
+    url: "/2025/06/16/dimension-reduction/#tsne"
   - title: "UMAP"
     url: "/2025/06/16/dimension-reduction/#umap"
   - title: "Link to Examples"
