@@ -8,7 +8,7 @@ sidebar:
 description: "Comparison of commonly used dimension reduction methods, ~10 min read"
 ---
 
-tldr summarytable;
+tldr summary table;
 
 | Feature                    | PCA    | t-SNE              | UMAP               |
 | -------------------------- | ------ | ------------------ | ------------------ |
