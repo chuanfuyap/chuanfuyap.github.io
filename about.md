@@ -7,6 +7,8 @@ I am half biologist, half programmer and half statistician, that makes me 1.5 sc
 
 Formally I am a researcher at a university, but informally I am just someone who enjoys learning new things and solving problems. Being a researcher, I am given the opportunity to do both, where I have to study and/or solve a problem, and most of the time in order to do so, I am required to learn new things, either technical methods or the background knowledge necessary. I aspire to be someone that can solve (almost) any problem using computer and mathematics. 
 
+My name would be more commonly known as Chuan Fu Yap for my research work as it would follow the convention of First Name (Chuan Fu) and Last Name (Yap). For my website I have decided to use what I grew up with, which is my surname first followed by my first name, so I am known as Yap Chuan Fu here.
+
 Below is my resume summary.
 
 ## Research Experience
