@@ -20,7 +20,7 @@ tldr summarytable;
 | Use in ML Pipelines        | Yes**    | No*  | No* |
 | Supports projection of new data          | Yes    | No                 | Yes                 |
 
-* t-SNE and UMAP are typically used for visualization rather than as preprocessing steps in machine learning pipelines.
+\* t-SNE and UMAP are typically used for visualization rather than as preprocessing steps in machine learning pipelines.
 
 ** PCA is commonly used for noise reduction, clustering, and as input to supervised models as part of machine learning pipelines. 
 
