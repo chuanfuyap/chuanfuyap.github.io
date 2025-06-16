@@ -25,9 +25,9 @@ PhD in Bioinformatics, supervised by [Dr Jean-Marc Schwartz](https://www.researc
 #### MBiolSci, University of Sheffield,     2010-2014
 Integrated Masters in Biochemistry, with final year project focusing on dynamic model of macrophage infection by _Staph aureus_. 
 ## Publication
-> My list of publication in chronological order
+> My list of publication in chronological order, * denotes first author
 
-1) [Model Parameterization with Quantitative Proteomics: Case Study with Trehalose Metabolism in Saccharomyces cerevisiae](https://doi.org/10.3390/pr9010139)
+1) *[Model Parameterization with Quantitative Proteomics: Case Study with Trehalose Metabolism in Saccharomyces cerevisiae](https://doi.org/10.3390/pr9010139)
 
 2) [Respiratory eukaryotic virome expansion and bacteriophage deficiency characterize childhood asthma](https://doi.org/10.1038/s41598-023-34730-7)
 
@@ -35,8 +35,16 @@ Integrated Masters in Biochemistry, with final year project focusing on dynamic 
 
 4) [Exploring the Impact of Airway Microbiome on Asthma Morbidity: A Focus on the “Constructing a ‘Eubiosis Reinstatement Therapy’ for Asthma—CURE” Project](https://doi.org/10.1007/s41030-024-00261-3)
 
-5) [HLA-DRB1 and HLA-DQA1 associated with immunogenicity to adalimumab therapy in patients with rheumatoid arthritis](http://dx.doi.org/10.1136/ard-2023-223955)
+5) *[HLA-DRB1 and HLA-DQA1 associated with immunogenicity to adalimumab therapy in patients with rheumatoid arthritis](http://dx.doi.org/10.1136/ard-2023-223955)
 
 6) [Using polygenic risk scores to aid diagnosis of patients with early inflammatory arthritis: results from the Norfolk Arthritis Register](https://doi.org/10.1002/art.42760)
 
-7) [Methods for Multi-Ancestry Genome-Wide Association Study Meta-Analysis](http://doi.org/10.1111/ahg.12572)
+7) *[Methods for Multi-Ancestry Genome-Wide Association Study Meta-Analysis](http://doi.org/10.1111/ahg.12572)
+
+8) [Multi-omics analysis in primary T cells elucidates mechanisms behind disease-associated genetic loci](https://doi.org/10.1186/s13059-025-03492-y)
+
+9) [Pre-treatment GlycA measurement provides no additional predictive utility beyond routine clinical measures in patients with rheumatoid arthritis](https://doi.org/10.1093/rheumatology/keaf235)
+
+10) *[Machine Learning Analysis of Whole-Blood Transcriptomics Data in Rheumatoid Arthritis Patients Treated with Adalimumab Identifies Predictive Biomarkers of Response](https://doi.org/10.1002/art.43255)
+
+11) *[Comparative Effectiveness of Abatacept versus Adalimumab in Shared Epitope positive and negative Rheumatoid Arthritis patients]() (in production)
