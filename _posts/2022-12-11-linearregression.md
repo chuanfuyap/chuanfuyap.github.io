@@ -518,13 +518,21 @@ How do we make sense of the interaction term? Before we get into the equation, l
 
 Here we have four different examples, the top two have no interaction effect, but additive effect as seen from earlier is observed in the plot on the top right. Bottom two plots are examples of interaction effect, where $$fruit$$ depend on $$X$$ and each fruit have a different coefficient as a result; This can be thought of the same as before where we have "two" models in one, but the interaction term within model would provide the statistical analysis to let us know that they are significantly different. It could also be done with a continuous variable where for example but it just makes it harder to visualise. 
 
-The visualisation shown above gives good understanding of interaction effect and much more straightforward, but this is limited to categorical predictors. In order to make it more general, we can use the equation to compute the interaction effect:
+The visualisation shown above gives good understanding of interaction effect and much more straightforward, but this is limited to categorical predictors. In order to make it more general, we can use the following equations to compute the marginal effect due to interactions:
+
+for marginal effect of $$X_1$$ on $$Y$$, holding $$X_2$$ constant
 
 \begin{equation}
-Y=\beta_0 + \beta_1 X_1+ \beta_2 X_2 + \beta_{1,2}(X_1X_2)
+\frac{\partial Y}{\partial X_1} = \beta_1 + \beta_{1,2} X_2
 \end{equation}
 
-Just as before the $$\beta_1$$ is effect per unit of $$X_1$$ while other $$\beta$$ is kept constant, but if $$X_2$$ is not zero, and there is an interaction, the new effect of $$X_1$$ would be $$\beta_1 + \beta_{1,2}X_2$$. The $$\beta_{1,2}$$ is the interaction effect, and its impact changes per unit of $$X_2$$, and in the event of categorical predictors, it would mean the effect on the presence of the other variable.
+or for marginal effect of $$X_2$$ on $$Y$$, holding $$X_1$$ constant
+
+\begin{equation}
+\frac{\partial Y}{\partial X_2} = \beta_2 + \beta_{1,2} X_1
+\end{equation}
+
+The interpretation is just as before the $$\beta_1$$ is effect per unit of $$X_1$$ while other $$\beta$$ is kept constant, but if $$X_2$$ is not zero, and there is an interaction, the new effect of $$X_1$$ would be $$\beta_1 + \beta_{1,2}X_2$$. The $$\beta_{1,2}$$ is the interaction effect, and its impact changes per unit of $$X_2$$, and in the event of categorical predictors, it would mean the effect on the presence of the other variable.
 
 <a class="anchor" id="modelbuilding"></a>
 
