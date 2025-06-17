@@ -8,6 +8,14 @@
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
 }
 
+
+/* justify text */
+.post-content p,
+.post p,
+.article p {
+  text-align: justify;
+}
+
 .repo-language-color {
     filter: brightness(125%) !important;
     border-radius: 50%;
@@ -31,13 +39,6 @@ table, th, td {
 th, td {
   padding: 8px;
   text-align: center;
-}
-
-/* justify text */
-.post-content p,
-.post p,
-article p {
-  text-align: justify;
 }
 
 thead {
