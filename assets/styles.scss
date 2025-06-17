@@ -30,7 +30,15 @@ table, th, td {
 
 th, td {
   padding: 8px;
-  text-align: left;
+  text-align: justify;
+}
+
+/* justify text */
+
+.post-content p,
+.post p,
+article p {
+  text-align: justify;
 }
 
 thead {
