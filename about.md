@@ -50,3 +50,5 @@ Integrated Masters in Biochemistry, with final year project focusing on dynamic 
 10) *[Machine Learning Analysis of Whole-Blood Transcriptomics Data in Rheumatoid Arthritis Patients Treated with Adalimumab Identifies Predictive Biomarkers of Response](https://doi.org/10.1002/art.43255)
 
 11) *[Comparative Effectiveness of Abatacept versus Adalimumab in Shared Epitope positive and negative Rheumatoid Arthritis patients](https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/art.43298)
+
+12) [Patterns of steroid use in patients with established rheumatoid arthritis commencing treatment with biologic or targeted synthetic DMARDs](https://academic.oup.com/rheumap/advance-article/doi/10.1093/rap/rkaf130/8402150)
