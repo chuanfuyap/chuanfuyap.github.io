@@ -52,3 +52,7 @@ Integrated Masters in Biochemistry, with final year project focusing on dynamic 
 11) *[Comparative Effectiveness of Abatacept versus Adalimumab in Shared Epitope positive and negative Rheumatoid Arthritis patients](https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/art.43298)
 
 12) [Patterns of steroid use in patients with established rheumatoid arthritis commencing treatment with biologic or targeted synthetic DMARDs](https://academic.oup.com/rheumap/advance-article/doi/10.1093/rap/rkaf130/8402150)
+
+13) *[HLA-DR risk variants in rheumatoid arthritis: what we know and still do not know](https://rmdopen.bmj.com/content/12/2/e006045)
+
+14) [Synovial DNA methylation signatures predict TNF inhibitor response in rheumatoid arthritis: an integrative multi-omic and machine learning analysis]()
