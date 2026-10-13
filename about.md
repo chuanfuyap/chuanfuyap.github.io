@@ -56,3 +56,7 @@ Integrated Masters in Biochemistry, with final year project focusing on dynamic 
 13) *[HLA-DR risk variants in rheumatoid arthritis: what we know and still do not know](https://rmdopen.bmj.com/content/12/2/e006045)
 
 14) [Synovial DNA methylation signatures predict TNF inhibitor response in rheumatoid arthritis: an integrative multi-omic and machine learning analysis]()
+
+15) *[Identifying biomarkers for methotrexate efficacy in rheumatoid arthritis: a machine learning approach to whole-blood transcriptomic analysis](https://doi.org/10.1093/rheumatology/keag560)
+
+16) [Exploratory single-cell multiomics suggests naïve CD4⁺ T-cell dysregulation in treatment refractory rheumatoid arthritis]()
